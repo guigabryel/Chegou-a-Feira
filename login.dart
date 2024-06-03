@@ -318,6 +318,7 @@ class _LoginState extends State<Login> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 20,),
+                  SizedBox(height: 20,),
                   Fim(),
                 ],
               ),
@@ -385,17 +386,22 @@ class Fim extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Column(
+    return Column(
         children: [
             Row(
               children: [
-                
-               Text('ONDE ESTAMOS',)
+               Text('    ONDE ESTAMOS',
+               style: TextStyle(
+                fontSize: 19,
+                color: Colors.white,
+               ),),
+              
+              SizedBox(height: 5,),
+              Text('ww')
               ],
+              
             ),
         ],
-   ),
   );
  }
 }
