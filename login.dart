@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'cadastro.dart';
 import 'destaques.dart';
 import 'barra.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -34,7 +36,7 @@ class _LoginState extends State<Login> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: 150,
-              color: Color.fromARGB(255, 68, 0, 124),
+              color: Color.fromARGB(255, 41, 5, 70),
               child: Row(
                 children: [
                   GestureDetector(
@@ -312,8 +314,8 @@ class _LoginState extends State<Login> {
                       SizedBox(height: 70,),
                   Container(
               width: MediaQuery.of(context).size.width,
-              height: 900,
-              color: Color.fromARGB(255, 68, 0, 124),
+              height: 830,
+              color: Color.fromARGB(255, 33, 3, 58),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -387,21 +389,256 @@ class Fim extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        children: [
-            Row(
-              children: [
-               Text('    ONDE ESTAMOS',
-               style: TextStyle(
+  children: [
+    Row(
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'ONDE ESTAMOS',
+              style: TextStyle(
                 fontSize: 19,
                 color: Colors.white,
-               ),),
-              
-              SizedBox(height: 5,),
-              Text('ww')
-              ],
-              
+              ),
             ),
-        ],
-  );
- }
+            SizedBox(height: 5),
+            Row(
+              children: [
+                Icon(Icons.location_on,
+                color: Colors.white,
+                size: 18,
+                ),
+            Text(
+              'Av. João Vieira Carneiro, 306 - João Pessoa/PB',
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+              ),
+            ),
+            ]
+           ),
+            SizedBox(height: 9),
+            Row(
+              children: [
+                Icon(Icons.local_post_office,
+                color: Colors.white,
+                size: 18,
+                ),
+            Text(
+              ' contato@chegouafeira.com.br',
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+              ),
+            ),
+            ]
+           ),
+            SizedBox(height: 9),
+            Row(
+              children: [
+                Icon(Icons.business,
+                color: Colors.white,
+                size: 18,
+                ),
+            Text(
+              ' 52.969.955/0001-55',
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+              ),
+            ),
+            ]
+           ),
+            SizedBox(height: 9),
+            Row(
+              children: [
+                FaIcon(
+                  FontAwesomeIcons.whatsapp,
+                  color: Colors.white, 
+                  size: 18,
+                ),
+            Text(
+              ' (83) 3021-4132 | 98840-4132',
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white,
+              ),
+            ),
+            ]
+           ),
+           SizedBox(height: 5,),
+           Text(
+              'INSTITUCIONAL',
+              style: TextStyle(
+                fontSize: 19,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 5,),
+            Row(
+              children: [
+                Text('O Chegou a Feira',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white
+                ),),],),
+                SizedBox(height: 5,),
+                Row(
+                  children: [
+                Text('Como Comprar',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white
+                ),),],),
+                SizedBox(height: 5,),
+                 Row(
+                  children: [
+                Text('Termos e Condições',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white
+                ),),],),
+                SizedBox(height: 5,),
+                 Row(
+                  children: [
+                Text('Entre em Contato',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white
+                ),),]),
+                SizedBox(height: 5,),
+                Text(
+              'AVISOS',
+              style: TextStyle(
+                fontSize: 19,
+                color: Colors.white,
+              ),
+            ),
+                SizedBox(height: 5,),
+                Text(
+              'AVISOS',
+              style: TextStyle(
+                fontSize: 19,
+                color: Colors.white,
+              ),
+            ),
+                SizedBox(height: 5,),
+                Text(
+              '* imagens meramente ilustrativas',
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.white,
+              ),
+            ),
+                SizedBox(height: 5,),
+                Text(
+              'Venda sujeita à disponibilidade de estoque no dia da',
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.white,
+              ),
+            ),
+                Text(
+              'entrega. No caso de faltar algum produto, este não será',
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.white,
+              ),
+            ),
+                Text(
+              'entregue e o valor correspondente não será cobrado.',
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 10,),
+            Divider(
+              color: Colors.white,
+              thickness: 1,
+            ),
+            SizedBox(height: 25,),
+
+            Image.asset(
+                      'assets/images/logo.png',
+                      width: 130,
+                      height: 70,
+                    ),
+              Text('Todos os direitos reservados',
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.white
+              ),),
+              Text('Chegou a Feira © 2024',
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.white
+              ),),
+           Image.asset(
+                      'assets/images/formas.png',
+                      width: MediaQuery.of(context).size.width,
+                      height: 40,
+                    ),
+            Row(
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width, // Largura total da tela
+                    height: 40, // Altura da imagem
+                    child: Align(
+                      alignment: Alignment.centerLeft, // Alinha a imagem à esquerda
+                      child: Image.asset(
+                        'assets/images/pagseguro.png',
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Divider(),
+              SizedBox(height: 10,),
+              
+              Padding(
+                padding: EdgeInsets.all(5.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                 
+                   IconButton(
+                    
+                    onPressed: (){
+
+                    }, 
+                    icon: Icon(Icons.facebook,
+                    size: 30,
+                    color: Colors.white,),
+                    ),
+                   IconButton(
+                    
+                    onPressed: (){
+
+                    }, 
+                    icon: Icon(Icons.camera_alt_outlined,
+                    size: 30,
+                    color: Colors.white,),
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                    child: Image.asset(
+                      'assets/images/pbsoft.png',
+                      
+              ),
+              ),
+                  ], 
+                ),
+              ),
+              ],
+            ),
+          ],
+        ),
+      ],
+    );
+  
+
+  }
 }
