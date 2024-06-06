@@ -1,4 +1,5 @@
 import 'package:chegou_a_feira/barra.dart';
+import 'package:chegou_a_feira/cadastro.dart';
 import 'package:flutter/material.dart';
 
 class Destaques extends StatefulWidget {
@@ -79,14 +80,14 @@ class _DestaquesState extends State<Destaques> {
       Container(
          width: MediaQuery.of(context).size.width,
          height: 70,
-         color: Color.fromARGB(255, 12, 12, 12),
+         color: Colors.white,
          child: 
          Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('DESTAQUES',
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 30,
             ),
            ),
@@ -97,28 +98,129 @@ class _DestaquesState extends State<Destaques> {
         children: [
           Container(
             width: 200,
-            height: 350,
+            height: 370,
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: Colors.white,
               border: Border.all(
-                color: Colors.blueGrey,
+                color: Colors.black12,
                 width: 1
               )
             ),
             
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset('assets/images/pbsoft.png')
-              ],
+                Column(
+                  children: [
+                    Stack(
+                      children: [
+                    Image.asset('assets/images/sabao.png', ),
+                    Positioned(
+                      bottom: 10,
+                      left: 0,
+                  child: Container(
+                      width: 78,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 41, 5, 70),
+                      ),
+                      child: Center(
+                        
+                        child: Text('PROMOÇÃO',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 11
+                      ),
+                     ),
+                    ),
+                   ), 
+                  ),
+
+                    
+
+
+                    ],
+                    ),
+                    SizedBox(height: 10,),
+                    
+                    Text('Sabão Liquido Becker 3L',),
+
+                    SizedBox(height: 50,),
+
+                    Padding(
+                      padding: const EdgeInsets.only(right: 30),
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Center(
+                            child: Text('R\$18,99',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 156, 16, 16),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                           ),
+                          ),
+                            SizedBox(width: 10,),
+                            Container(
+                        width: 75,
+                        height: 25,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 156, 16, 16),
+                        ),
+                        child: Stack(
+                          
+                          children: [
+                            
+                            Align(
+                              alignment: Alignment.center,
+                            
+                            child: Text('R\$21,99',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14
+                        ),
+                       ),
+                      ),
+                       Positioned(
+                        left: 9,
+                        child: Text('__________',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12
+             ),
             ),
+           ),
+          ],
+         ),
+        ), 
+       ],
+      ),
+     ),
+    ),
+   ]
+  ),
+ ],
+),
+            
           ),
           Container(
             width: 192.7,
-            height: 350,
-            color: Colors.blue,
+            height: 370,
+            decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(
+              color: Colors.black12,
+              width: 1
           ),
-        ],
+         ),
+        ),
+       ],
       ),
      ],
     ),
@@ -126,6 +228,10 @@ class _DestaquesState extends State<Destaques> {
   );
  }
 }
+
+
+
+
 
 
 
