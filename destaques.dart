@@ -170,7 +170,7 @@ class _DestaquesState extends State<Destaques> {
                         width: 75,
                         height: 25,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 156, 16, 16),
+                          color: Color.fromARGB(255, 202, 24, 24),
                         ),
                         child: Stack(
                           
@@ -183,7 +183,8 @@ class _DestaquesState extends State<Destaques> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 14
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold
                         ),
                        ),
                       ),
@@ -193,16 +194,30 @@ class _DestaquesState extends State<Destaques> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 12
+              ),
              ),
             ),
-           ),
-          ],
-         ),
-        ), 
-       ],
+           ],
+          ),
+         ), 
+        ],
+       ),
       ),
      ),
+                        Container(
+                         width: 170,
+                        height: 25,
+                        decoration: BoxDecoration(
+                        color: Colors.white
+                          ),
+                        child: Divider(color: Colors.black12,),
+
     ),
+                        Container(
+                          width: 170,
+                        height: 25,
+                          child: QuantitySelector(),
+                        )
    ]
   ),
  ],
@@ -254,7 +269,7 @@ class Barra extends StatelessWidget {
           SizedBox(width: 10,),
         ],
       ),
-);
+    );
   }
 }
 
@@ -304,5 +319,69 @@ class _SearchBarState extends State<SearchBar> {
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+}
+
+
+// BOTÃO DE ADICIONAR
+class QuantitySelector extends StatefulWidget {
+  @override
+  _QuantitySelectorState createState() => _QuantitySelectorState();
+}
+
+class _QuantitySelectorState extends State<QuantitySelector> {
+  int quantity = 1;
+
+  void incrementQuantity() {
+    setState(() {
+      quantity++;
+    });
+  }
+
+  void decrementQuantity() {
+    setState(() {
+      if (quantity > 1) {
+        quantity--;
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ElevatedButton(
+              onPressed: decrementQuantity,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black12,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0), // Borda arredondada
+                ),
+                padding: EdgeInsets.all(16), // Padding interno
+              ),
+              child: Icon(Icons.remove),
+            ),
+            Text(
+              '$quantity',
+              style: TextStyle(fontSize: 20),
+            ),
+            ElevatedButton(
+              onPressed: incrementQuantity,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black12,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0), // Borda arredondada
+                ),
+                padding: EdgeInsets.all(16), // Padding interno
+              ),
+              child: Icon(Icons.add),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
