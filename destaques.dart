@@ -32,7 +32,7 @@ class _DestaquesState extends State<Destaques> {
               children: [
                   Container(
               width: MediaQuery.of(context).size.width,
-              height: 150,
+              height: 100,
               color: Color.fromARGB(255, 81, 44, 99),
               child: Row(
                 children: [
@@ -60,23 +60,52 @@ class _DestaquesState extends State<Destaques> {
                       fontSize: 18,
                     ),
                   ),
-                  Text(
-                    'R\$0,00',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  
+                  Row(
+                    children: [
+                      Icon(
+            Icons.shopping_cart,
+            color: Colors.white,
+            size: 20,
+          ),
+          SizedBox(width: 5,),
+                      Text(
+                        'R\$0,00',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(height: 10,),
 
               
-              SizedBox(width: 100, child: SearchBar(),),
+              
                 ],
                ),      
         ],
        ),
+       
       ),
+                  Container(
+              height: 70,
+              decoration: BoxDecoration(
+              color: Color.fromARGB(255, 81, 44, 99),
+              border: Border.all(
+                color: Color.fromARGB(255, 81, 44, 99),
+              )
+              ),
+              child: 
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SearchBar(),
+                ),
+                ),
+            ),
+
       Container(
          width: MediaQuery.of(context).size.width,
          height: 70,
@@ -98,7 +127,7 @@ class _DestaquesState extends State<Destaques> {
         children: [
           Container(
             width: 200,
-            height: 370,
+            height: 420,
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(
@@ -204,9 +233,11 @@ class _DestaquesState extends State<Destaques> {
        ),
       ),
      ),
+                        SizedBox(height: 20,),
+
                         Container(
                          width: 170,
-                        height: 25,
+                        height: 5,
                         decoration: BoxDecoration(
                         color: Colors.white
                           ),
@@ -214,27 +245,146 @@ class _DestaquesState extends State<Destaques> {
 
     ),
                         Container(
-                          width: 170,
-                        height: 25,
+                          width: 180,
+                        height: 100,
                           child: QuantitySelector(),
                         )
-   ]
-  ),
- ],
-),
-            
+               ]
+              ),
+             ],
+            ),           
           ),
           Container(
-            width: 192.7,
-            height: 370,
+            width: 190,
+            height: 420,
             decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.all(
-              color: Colors.black12,
-              width: 1
+              color: Colors.white,
+              border: Border.all(
+                color: Colors.black12,
+                width: 1
+              )
+            ),
+            
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  children: [
+                    Stack(
+                      children: [
+                    Image.asset('assets/images/biscoito.png', ),
+                    Positioned(
+                      bottom: 10,
+                      left: 0,
+                  child: Container(
+                      width: 78,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 41, 5, 70),
+                      ),
+                      child: Center(
+                        
+                        child: Text('PROMOÇÃO',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 11
+                      ),
+                     ),
+                    ),
+                   ), 
+                  ),
+
+                    
+
+
+                    ],
+                    ),
+                    SizedBox(height: 10,),
+                    
+                    Text('Biscoito Vitarella Cream',),
+                    Text('Cracker Tradicional 350g',),
+
+                    SizedBox(height: 30,),
+
+                    Padding(
+                      padding: const EdgeInsets.only(right: 30),
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Center(
+                            child: Text('R\$4,89',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 156, 16, 16),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                           ),
+                          ),
+                            SizedBox(width: 10,),
+                            Container(
+                        width: 75,
+                        height: 25,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 202, 24, 24),
+                        ),
+                        child: Stack(
+                          
+                          children: [
+                            
+                            Align(
+                              alignment: Alignment.center,
+                            
+                            child: Text('R\$5,39',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold
+                        ),
+                       ),
+                      ),
+                       Positioned(
+                        left: 9,
+                        child: Text('__________',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12
+              ),
+             ),
+            ),
+           ],
           ),
-         ),
-        ),
+         ), 
+        ],
+       ),
+      ),
+     ),
+                        SizedBox(height: 20,),
+
+                        Container(
+                         width: 170,
+                        height: 5,
+                        decoration: BoxDecoration(
+                        color: Colors.white
+                          ),
+                        child: Divider(color: Colors.black12,),
+
+    ),
+                        Container(
+                          width: 180,
+                        height: 100,
+                          child: QuantitySelector(),
+                        )
+               ]
+              ),
+             ],
+            ),           
+          ),
+          
        ],
       ),
      ],
@@ -290,18 +440,18 @@ class _SearchBarState extends State<SearchBar> {
         hintText: 'Digite o que está procurando',
         hintStyle: TextStyle(color: Colors.grey), // Cor do texto do hint
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(0.0),
           borderSide: BorderSide.none,
         ),
         filled: true,
-        fillColor: Color.fromARGB(255, 46, 45, 45), // Cor de fundo
+        fillColor: Colors.white,
         contentPadding: EdgeInsets.symmetric(horizontal: 16.0), // Espaçamento interno
         suffixIcon: Container(
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 110, 66, 146),
             borderRadius: BorderRadius.only(
-              topRight: Radius.circular(8.0),
-              bottomRight: Radius.circular(8.0),
+              topRight: Radius.circular(0.0),
+              bottomRight: Radius.circular(0.0),
             ),
           ),
           child: Icon(Icons.search, color: Colors.white,), // Ícone de pesquisa
@@ -330,58 +480,68 @@ class QuantitySelector extends StatefulWidget {
 }
 
 class _QuantitySelectorState extends State<QuantitySelector> {
-  int quantity = 1;
+int _counter = 0;
 
-  void incrementQuantity() {
+  void _incrementCounter() {
     setState(() {
-      quantity++;
+      _counter++;
     });
   }
 
-  void decrementQuantity() {
+  void _decrementCounter() {
     setState(() {
-      if (quantity > 1) {
-        quantity--;
+      if (_counter > 0) {
+        _counter--;
       }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: decrementQuantity,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black12,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0), // Borda arredondada
-                ),
-                padding: EdgeInsets.all(16), // Padding interno
-              ),
-              child: Icon(Icons.remove),
+            IconButton(
+              icon: Icon(Icons.remove),
+              onPressed: _decrementCounter,
+              color: Colors.black,
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              iconSize: 24.0,
             ),
-            Text(
-              '$quantity',
-              style: TextStyle(fontSize: 20),
-            ),
-            ElevatedButton(
-              onPressed: incrementQuantity,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black12,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0), // Borda arredondada
-                ),
-                padding: EdgeInsets.all(16), // Padding interno
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                '$_counter',
+                style: TextStyle(fontSize: 20.0),
               ),
-              child: Icon(Icons.add),
+            ),
+            IconButton(
+              icon: Icon(Icons.add),
+              onPressed: _incrementCounter,
+              color: Colors.black,
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              iconSize: 24.0,
             ),
           ],
         ),
-      ),
+        ElevatedButton(
+          onPressed: () {
+            // Adicione a ação do botão aqui
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.lightBlue, 
+            fixedSize: Size(150, 30),
+            shape: RoundedRectangleBorder(),
+            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5.0),
+          ),
+          child: Icon(
+            Icons.shopping_cart,
+            color: Colors.white,
+          ),
+        ),
+      ],
     );
-  }
-}
+  }}
