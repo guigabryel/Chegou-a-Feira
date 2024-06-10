@@ -35,8 +35,8 @@ class _LoginState extends State<Login> {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 150,
-              color: Color.fromARGB(255, 41, 5, 70),
+              height: 100,
+              color: Color.fromARGB(255, 81, 44, 99),
               child: Row(
                 children: [
                   GestureDetector(
@@ -71,74 +71,154 @@ class _LoginState extends State<Login> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 10,),
-
-                  
-                  SizedBox(width: 100, child: SearchBar(),),
                     ],
-                  ),
-
-                  
                     
+                  ),
                   
                 ],
               ),
+              
+            ),
+            Container(
+              height: 70,
+              decoration: BoxDecoration(
+              color: Color.fromARGB(255, 81, 44, 99),
+              border: Border.all(
+                color: Color.fromARGB(255, 81, 44, 99),
+              )
+              ),
+              child: 
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SearchBar(),
+                ),
+                ),
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 1800,
-              color: Color.fromARGB(255, 12, 12, 12),
+              height: 1770,
+              color: Color.fromARGB(255, 255, 255, 255),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 20,),
+
                   Text(
-                    '   Nosso supermercado virtual está mais moderno e seguro, ',
+                    'Nosso supermercado virtual está mais moderno e seguro, agora',
+                    textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.white70,
+                      color: Colors.black,
                       fontSize: 13,
                     ),
                   ),
-                  Text(
-                    '   agora o login é através do E-mail do seu cadastro, caso tenha',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 13,
-                    ),
+                  Row(
+                    children: [
+                      Text(
+                        'o login é através do ',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                        ),
+                      ),
+                      Text('E-mail',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Text(' do seu cadastro, caso tenha',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'problemas com sua senha, escolha a opção ',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                        ),
+                      ),
+                      Text('Solicitar nova ',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'senha.',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Text(' Dúvidas ou problemas nos contate através do telefone ',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        '(83) 98840-4132 ',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Text('ou através do e-mail',
+                       style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                        ),
+                      )
+                    ],
                   ),
                   Text(
-                    '   problemas com sua senha, escolha a opção Solicitar nova ',
+                    'contato@chegoafeira.com.br',
+                    textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: Colors.white70,
+                     color: Colors.black,
                       fontSize: 13,
-                    ),
-                  ),
-                  Text(
-                    '   senha. Dúvidas ou problemas nos contate através do telefone ',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 13,
-                    ),
-                  ),
-                  Text(
-                    '   (83) 98840-4132 ou através do e-mail ',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 13,
-                    ),
-                  ),
-                  Text(
-                    '   contato@chegoafeira.com.br',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                      decorationColor: Colors.black
+                      
+                      
                     ),
                   ),
                   SizedBox(height: 20,),
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 270,
-                    color: Color.fromARGB(255, 31, 30, 30),
+                    decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 238, 236, 236),
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 1.5,
+                    ),
+                    borderRadius: BorderRadius.circular(5.0)
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -146,7 +226,7 @@ class _LoginState extends State<Login> {
                         Text(
                           '  Ainda não é cliente? ',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Colors.black,
                             fontSize: 32,
                           ),
                         ),
@@ -154,7 +234,7 @@ class _LoginState extends State<Login> {
                         Text(
                           '    Cadastre-se',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Color.fromARGB(255, 75, 74, 74),
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -163,28 +243,28 @@ class _LoginState extends State<Login> {
                         Text(
                           '    Ao cadastrar sua conta, você será capaz de',
                           style: TextStyle(
-                            color: Colors.white70,
+                           color: Color.fromARGB(255, 75, 74, 74),
                             fontSize: 16,
                           ),
                         ),
                         Text(
                           '    comprar mais rápido, ficar atualizado sobre a',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Color.fromARGB(255, 75, 74, 74),
                             fontSize: 16,
                           ),
                         ),
                         Text(
                           '    situação de um pedido e acompanhar o histórico',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Color.fromARGB(255, 75, 74, 74),
                             fontSize: 16,
                           ),
                         ),
                         Text(
                           '    dos pedidos que você já fez.',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Color.fromARGB(255, 75, 74, 74),
                             fontSize: 16,
                           ),
                         ),
@@ -200,8 +280,8 @@ class _LoginState extends State<Login> {
                             child: Text('Continuar'),
                             style: ElevatedButton.styleFrom(
                               foregroundColor: Colors.white,
-                              backgroundColor: Color.fromARGB(255, 41, 5, 70), // Cor do texto do botão
-                              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10), // Padding do botão
+                              backgroundColor: Color.fromARGB(255, 41, 5, 70), 
+                              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10), 
                               shape: RoundedRectangleBorder(),
                             ),
                           ),
@@ -212,8 +292,15 @@ class _LoginState extends State<Login> {
                   SizedBox(height: 20,),
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    height: 400,
-                    color: Color.fromARGB(255, 31, 30, 30),
+                    height: 430,
+                    decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 238, 236, 236),
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 1.5,
+                    ),
+                    borderRadius: BorderRadius.circular(5.0)
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -221,7 +308,7 @@ class _LoginState extends State<Login> {
                         Text(
                           '  Já é cliente? ',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Colors.black,
                             fontSize: 32,
                           ),
                         ),
@@ -229,7 +316,7 @@ class _LoginState extends State<Login> {
                         Text(
                           '    Se você fez um pedido e cadastrou uma conta,',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Color.fromARGB(255, 75, 74, 74),
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -237,7 +324,7 @@ class _LoginState extends State<Login> {
                         Text(
                           '    coloque os dados da conta abaixo:',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Color.fromARGB(255, 75, 74, 74),
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -246,47 +333,54 @@ class _LoginState extends State<Login> {
                         Text(
                           '     E-mail',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Color.fromARGB(255, 75, 74, 74),
                             fontSize: 14,
                           ),
                         ),
-                        SizedBox(height: 10,),
-                        TextField(
-                          decoration: InputDecoration(
-                            labelText: 'E-mail',
-                            contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            )
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              labelText: 'E-mail',
+                              contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(3),
+                              )
+                            ),
                           ),
                         ),
                         SizedBox(height: 10,),
                         Text(
                           '     Senha',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Color.fromARGB(255, 75, 74, 74),
                             fontSize: 14,
                           ),
                         ),
-                        SizedBox(height: 10,),
-                        TextField(
-                          decoration: InputDecoration(
-                            labelText: 'Senha',
-                            contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            )
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              labelText: 'Senha',
+                              contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(3),
+                              )
+                            ),
                           ),
                         ),
 
                         SizedBox(height: 10,),
                         
-                        Text(
-                          '    Solicitar nova senha',
-                          style: TextStyle(
-                            color: Colors.white70,
-                            decoration: TextDecoration.underline,
-                            decorationColor: Colors.white
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16.0),
+                          child: Text(
+                            'Solicitar nova senha',
+                            style: TextStyle(
+                             color: Color.fromARGB(255, 75, 74, 74),
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.white
+                            ),
                           ),
                         ),
                         SizedBox(height: 13,),  
@@ -314,7 +408,7 @@ class _LoginState extends State<Login> {
                       SizedBox(height: 70,),
                   Container(
               width: MediaQuery.of(context).size.width,
-              height: 830,
+              height: 850,
               color: Color.fromARGB(255, 33, 3, 58),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -349,30 +443,30 @@ class _SearchBarState extends State<SearchBar> {
       controller: _controller,
       decoration: InputDecoration(
         hintText: 'Digite o que está procurando',
-        hintStyle: TextStyle(color: Colors.grey), // Cor do texto do hint
+        hintStyle: TextStyle(color: Colors.grey), 
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(0.0),
           borderSide: BorderSide.none,
         ),
         filled: true,
-        fillColor: Color.fromARGB(255, 46, 45, 45), // Cor de fundo
-        contentPadding: EdgeInsets.symmetric(horizontal: 16.0), // Espaçamento interno
+        fillColor: Colors.white, 
+        contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
         suffixIcon: Container(
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 110, 66, 146),
             borderRadius: BorderRadius.only(
-              topRight: Radius.circular(8.0),
-              bottomRight: Radius.circular(8.0),
+              topRight: Radius.circular(0.0),
+              bottomRight: Radius.circular(0.0),
             ),
           ),
-          child: Icon(Icons.search, color: Colors.white,), // Ícone de pesquisa
+          child: Icon(Icons.search, color: Colors.white,), 
         ),
       ),
       onChanged: (value) {
-        // Aqui você pode adicionar a lógica para pesquisar conforme o usuário digita
+        
         print('Pesquisando por: $value');
       },
-      style: TextStyle(color: Colors.white), // Cor do texto
+      style: TextStyle(color: Colors.white), 
     );
   }
 
@@ -395,11 +489,14 @@ class Fim extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'ONDE ESTAMOS',
-              style: TextStyle(
-                fontSize: 19,
-                color: Colors.white,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'ONDE ESTAMOS',
+                style: TextStyle(
+                  fontSize: 19,
+                  color: Colors.white,
+                ),
               ),
             ),
             SizedBox(height: 5),
@@ -554,11 +651,21 @@ class Fim extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10,),
-            Divider(
-              color: Colors.white,
-              thickness: 1,
+            
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                           width: 370,
+                          height: 25,
+                          decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 33, 3, 58),
+                            ),
+                          child: Divider(color: Colors.grey,),
+              
+                  ),
             ),
-            SizedBox(height: 25,),
+
+            SizedBox(height: 10,),
 
             Image.asset(
                       'assets/images/logo.png',
@@ -595,43 +702,53 @@ class Fim extends StatelessWidget {
                   ),
                 ],
               ),
-              Divider(),
+                          Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                           width: 370,
+                          height: 25,
+                          decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 33, 3, 58),
+                            ),
+                          child: Divider(color: Colors.grey,),
+              
+                  ),
+            ),
+
               SizedBox(height: 10,),
               
-              Padding(
-                padding: EdgeInsets.all(5.0),
-              child: Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                  
                    IconButton(
                     
-                    onPressed: (){
-
-                    }, 
+                    onPressed: (){}, 
                     icon: Icon(Icons.facebook,
                     size: 30,
-                    color: Colors.white,),
+                    color: Colors.white,
                     ),
+                   ),
                    IconButton(
                     
-                    onPressed: (){
-
-                    }, 
+                    onPressed: (){}, 
                     icon: Icon(Icons.camera_alt_outlined,
                     size: 30,
-                    color: Colors.white,),
+                    color: Colors.white,
                     ),
-                    Align(
-                      alignment: Alignment.topRight,
-                    child: Image.asset(
+                   ),
+                   Positioned(
+                    top: 0,
+                    right: 0, 
+                    child: 
+                    Image.asset(
                       'assets/images/pbsoft.png',
-                      
-              ),
-              ),
+                      width: 200 ,
+                     height: 50 ,
+                      ),
+                   ),
                   ], 
                 ),
-              ),
               ],
             ),
           ],
