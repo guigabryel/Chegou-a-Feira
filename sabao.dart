@@ -1,5 +1,6 @@
 import 'package:chegou_a_feira/barra.dart';
 import 'package:chegou_a_feira/destaques.dart';
+import 'package:chegou_a_feira/login.dart';
 import 'package:flutter/material.dart';
 
 class Sabao extends StatelessWidget {
@@ -113,7 +114,105 @@ class Sabao extends StatelessWidget {
             )
           ],
         ),
-      )
+      ),
+      Container(
+        height: 1111,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white
+        ),
+        child: 
+        Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Text(
+                'Sabão Liquido Becker 3L',
+                style: TextStyle(
+                  fontSize: 30
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 270),
+              child: Text('Modelo: 231'),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 175),
+              child: Text('Diponibilidade: Em estoque'),
+            ),
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(right: 295),
+              child: Container(
+                          width: 75,
+                          height: 25,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                          ),
+                          child: Stack(
+                            
+                            children: [
+                              
+                              Align(
+                                alignment: Alignment.center,
+                              
+                              child: Text('R\$21,99',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold
+                          ),
+                         ),
+                        ),
+                         Positioned(
+                          left: 9,
+                          child: Text('__________',
+                          style: TextStyle(
+                            fontSize: 12
+                ),
+               ),
+              ),
+             ],
+            ),
+           ),
+          ),
+          SizedBox(height: 5,),
+
+          Padding(
+            padding: const EdgeInsets.only(right: 238),
+            child: Text('R\$18,99',
+            style: TextStyle(
+              color: Color.fromARGB(255, 156, 16, 16),
+              fontSize: 30,
+              fontWeight: FontWeight.bold
+            ),
+            ),
+          ), 
+
+                        Container(
+                          width: 330,
+                        height: 100,
+                          child: QuantitySelector2(),
+                        ),
+                        Container(
+              width: MediaQuery.of(context).size.width,
+              height: 850,
+              color: Color.fromARGB(255, 33, 3, 58),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 20,),
+                  SizedBox(height: 20,),
+                  Fim(),
+                ],
+              ),
+                  ),
+          ],
+        ),
+        
+      ),
+      
      ]
     ),
    ),
@@ -168,5 +267,89 @@ class _SearchBarState extends State<SearchBar> {
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+}
+
+
+// BOTÃO DE ADICIONAR
+class QuantitySelector2 extends StatefulWidget {
+  @override
+  _QuantitySelectorState createState() => _QuantitySelectorState();
+}
+
+class _QuantitySelectorState extends State<QuantitySelector2> {
+int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  void _decrementCounter() {
+    setState(() {
+      if (_counter > 0) {
+        _counter--;
+      }
+    });
+  }
+
+@override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+      ),
+      child: Row(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black),
+              borderRadius: BorderRadius.circular(20.0),
+              color: Colors.white,
+            ),
+            child: IconButton(
+              icon: Icon(Icons.remove),
+              onPressed: _decrementCounter,
+              color: Colors.black,
+            ),
+          ),
+          Expanded(
+            child: Center(
+              child: Text(
+                '$_counter',
+                style: TextStyle(fontSize: 20.0),
+              ),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black),
+              borderRadius: BorderRadius.circular(20.0),
+              color: Colors.white,
+            ),
+            child: IconButton(
+              icon: Icon(Icons.add),
+              onPressed: _incrementCounter,
+              color: Colors.black,
+            ),
+          ),
+          SizedBox(width: 20,),
+          Container(
+            height: 48.0,
+            decoration: BoxDecoration(
+              color: Colors.lightBlue,
+              border: Border.all(color: Colors.lightBlue),
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: IconButton(
+              icon: Icon(Icons.shopping_cart),
+              onPressed: () {
+              },
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
