@@ -2,6 +2,7 @@ import 'package:chegou_a_feira/barra.dart';
 import 'package:chegou_a_feira/destaques.dart';
 import 'package:chegou_a_feira/login.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Sabao extends StatelessWidget {
   const Sabao({super.key});
@@ -10,19 +11,168 @@ class Sabao extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 176, 39, 69),
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.menu, color: Colors.white,),
-        ),
+              backgroundColor: Color.fromARGB(255, 176, 39, 69),
+              iconTheme: IconThemeData(
+                color: Colors.white
+              ),
+        
         actions: [
           login(),
           SizedBox(width: 18,),
           cadastro(),
           SizedBox(width: 10,),
-          
-          
-        ],
+        ]
+      ),
+      drawer: Drawer(
+        
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 176, 39, 69),
+              ),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        child: Text('perfil', style: TextStyle(fontSize: 15),),
+            radius: 30,
+            backgroundColor: Colors.black,
+            foregroundColor: Colors.white,
+                      ),
+                      Text(
+                        'Nome',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                        ),
+                      ),
+                      Text(
+                        'E-mail',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            
+            ListTile(
+              leading: Icon(Icons.star, color: Colors.purple,),
+              title: Text('DESTAQUES'),
+              onTap: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Destaques()),
+                );
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: Icon(Icons.local_bar, color: Colors.black,),
+              title: Text('BEBIDAS'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: Icon(Icons.cookie, color: Color.fromARGB(255, 116, 58, 37),),
+              title: Text('BEBIDAS E CHOCOLATES'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.cheese, color: Color.fromARGB(255, 197, 191, 131),),
+              title: Text('FRIO E LATICÍNIOS'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.soap, color: Colors.blue,),
+              title: Text('HIGIENE E BELEZA'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.appleAlt, color: Color.fromARGB(255, 17, 88, 19),),
+              title: Text('HOTIFRUTI'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.sprayCan, color: Colors.lightBlue,),
+              title: Text('LIMPEZA'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.shoppingBasket, color: Colors.green,),
+              title: Text('MERCEARIA'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.breadSlice, color: const Color.fromARGB(255, 187, 109, 80),),
+              title: Text('PADARIA'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.paw, color: Colors.brown,),
+              title: Text('UTILIDADES E PETSHOP'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
       ),
             body: SingleChildScrollView(
               child:  Column(
@@ -236,14 +386,14 @@ class _SearchBarState extends State<SearchBar> {
       controller: _controller,
       decoration: InputDecoration(
         hintText: 'Digite o que está procurando',
-        hintStyle: TextStyle(color: Colors.grey), // Cor do texto do hint
+        hintStyle: TextStyle(color: Colors.grey), 
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(0.0),
           borderSide: BorderSide.none,
         ),
         filled: true,
         fillColor: Colors.white,
-        contentPadding: EdgeInsets.symmetric(horizontal: 16.0), // Espaçamento interno
+        contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
         suffixIcon: Container(
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 110, 66, 146),
@@ -252,14 +402,13 @@ class _SearchBarState extends State<SearchBar> {
               bottomRight: Radius.circular(0.0),
             ),
           ),
-          child: Icon(Icons.search, color: Colors.white,), // Ícone de pesquisa
+          child: Icon(Icons.search, color: Colors.white,), 
         ),
       ),
       onChanged: (value) {
-        // Aqui você pode adicionar a lógica para pesquisar conforme o usuário digita
         print('Pesquisando por: $value');
       },
-      style: TextStyle(color: Colors.white), // Cor do texto
+      style: TextStyle(color: Colors.white), 
     );
   }
 
