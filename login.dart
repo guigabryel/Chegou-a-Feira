@@ -1,68 +1,221 @@
+import 'package:chegou_a_feira/barra.dart';
+import 'package:chegou_a_feira/destaques.dart';
+import 'package:chegou_a_feira/login.dart';
 import 'package:flutter/material.dart';
-import 'cadastro.dart';
-import 'destaques.dart';
-import 'barra.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
-class Login extends StatefulWidget {
-  const Login({super.key});
-
-  @override
-  State<Login> createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
+class Cadastro extends StatelessWidget {
+  const Cadastro({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 176, 39, 69),
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.menu, color: Colors.white,),
-        ),
+            appBar: AppBar(
+              backgroundColor: Color.fromARGB(255, 176, 39, 69),
+              iconTheme: IconThemeData(
+                color: Colors.white
+              ),
+        
         actions: [
           login(),
           SizedBox(width: 18,),
           cadastro(),
           SizedBox(width: 10,),
-        ],
+        ]
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
+      drawer: Drawer(
+        
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 176, 39, 69),
+              ),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        child: Text('perfil', style: TextStyle(fontSize: 15),),
+            radius: 30,
+            backgroundColor: Colors.black,
+            foregroundColor: Colors.white,
+                      ),
+                      Text(
+                        'Nome',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                        ),
+                      ),
+                      Text(
+                        'E-mail',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            
+            ListTile(
+              leading: Icon(Icons.star, color: Colors.purple,),
+              title: Text('DESTAQUES'),
+              onTap: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Destaques()),
+                );
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: Icon(Icons.local_bar, color: Colors.black,),
+              title: Text('BEBIDAS'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: Icon(Icons.cookie, color: Color.fromARGB(255, 116, 58, 37),),
+              title: Text('BEBIDAS E CHOCOLATES'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.cheese, color: Color.fromARGB(255, 197, 191, 131),),
+              title: Text('FRIO E LATICÍNIOS'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.soap, color: Colors.blue,),
+              title: Text('HIGIENE E BELEZA'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.appleAlt, color: Color.fromARGB(255, 17, 88, 19),),
+              title: Text('HOTIFRUTI'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.sprayCan, color: Colors.lightBlue,),
+              title: Text('LIMPEZA'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.shoppingBasket, color: Colors.green,),
+              title: Text('MERCEARIA'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.breadSlice, color: const Color.fromARGB(255, 187, 109, 80),),
+              title: Text('PADARIA'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              leading: FaIcon(FontAwesomeIcons.paw, color: Colors.brown,),
+              title: Text('UTILIDADES E PETSHOP'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
+            body: SingleChildScrollView(
+              child:  Column(
+              children: [
+                  Container(
               width: MediaQuery.of(context).size.width,
               height: 100,
               color: Color.fromARGB(255, 81, 44, 99),
               child: Row(
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => Destaques()),
-                      );
-                    },
-                    child: Image.asset(
-                      'assets/images/logo.png',
-                      width: 130,
-                      height: 130,
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Destaques()),
+                  );
+                        },
+              child: Image.asset(
+                'assets/images/logo.png',
+                width: 130,
+                height: 130,
+              ),
+                      ),
+                  SizedBox(width: 80),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Meu carrinho',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
                     ),
                   ),
-                  SizedBox(width: 80),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  
+                  Row(
                     children: [
-                      Text(
-                        'Meu carrinho',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                        ),
-                      ),
+                      Icon(
+            Icons.shopping_cart,
+            color: Colors.white,
+            size: 20,
+          ),
+          SizedBox(width: 5,),
                       Text(
                         'R\$0,00',
                         style: TextStyle(
@@ -72,14 +225,14 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ],
-                    
                   ),
-                  
-                ],
-              ),
-              
-            ),
-            Container(
+                  SizedBox(height: 10,),
+          ],
+         ),      
+        ],
+       ),
+      ),
+      Container(
               height: 70,
               decoration: BoxDecoration(
               color: Color.fromARGB(255, 81, 44, 99),
@@ -92,185 +245,315 @@ class _LoginState extends State<Login> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SearchBar(),
-                ),
-                ),
-            ),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 1770,
-              color: Color.fromARGB(255, 255, 255, 255),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 20,),
+        ),
+       ),
+      ),
+      Container(
+        height: 2016,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white
+        ),
+        child: Column(
+          children: [
+            SizedBox(height: 30,),
 
-                  Text(
-                    'Nosso supermercado virtual está mais moderno e seguro, agora',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 13,
-                    ),
+            Padding(
+              padding: const EdgeInsets.only(right: 200),
+              child: Text('Minha Conta',
+              style: TextStyle(
+                fontSize: 28
+              ),
+              ),
+            ),
+            SizedBox(height: 5,),
+
+            Padding(
+              padding: const EdgeInsets.only(right: 43),
+              child: Text('Se você já tem uma conta em nossa loja, acesse '),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 17),
+              child: Row(
+                children: [
+                  Text('sua conta '),
+              
+                  GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Login()),
+                  );
+                        },
+              child: Text('clicando aqui.',
+                  style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'o login é através do ',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 13,
-                        ),
                       ),
-                      Text('E-mail',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      Text(' do seu cadastro, caso tenha',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 13,
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'problemas com sua senha, escolha a opção ',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 13,
-                        ),
-                      ),
-                      Text('Solicitar nova ',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        'senha.',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      Text(' Dúvidas ou problemas nos contate através do telefone ',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 13,
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        '(83) 98840-4132 ',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      Text('ou através do e-mail',
-                       style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 13,
-                        ),
-                      )
-                    ],
-                  ),
-                  Text(
-                    'contato@chegoafeira.com.br',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                     color: Colors.black,
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      decorationColor: Colors.black
-                      
-                      
-                    ),
-                  ),
-                  SizedBox(height: 20,),
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 270,
-                    decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 238, 236, 236),
-                    border: Border.all(
-                      color: Colors.grey,
-                      width: 1.5,
-                    ),
-                    borderRadius: BorderRadius.circular(5.0)
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 20,),
-                        Text(
-                          '  Ainda não é cliente? ',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 32,
+                ],
+              ),
+            ),
+
+            SizedBox(height: 10,),
+
+            Padding(
+              padding: EdgeInsets.only(right: 148),
+              child: Text('Seus dados de contato',
+              style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Padding(
+              padding:  EdgeInsets.only(top: 1),
+            
+              child: Divider(color: Colors.black12,
+              thickness: 1,),
+            ),
+            
+            Padding(
+              padding: const EdgeInsets.only(left: 19),
+              child: Row(children: [
+                Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
+                SizedBox(width: 3,),
+                Text('Nome'),
+
+              ],
+              ),
+            ),
+            Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: SizedBox(
+                            height: 38,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                labelText: 'Nome',
+                                labelStyle: TextStyle(color: Colors.grey),
+                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(3),
+                                )
+                              ),
+                            ),
                           ),
                         ),
-                        SizedBox(height: 7,),
-                        Text(
-                          '    Cadastre-se',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 75, 74, 74),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                        SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(left: 19),
+              child: Row(children: [
+                Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
+                SizedBox(width: 3,),
+                Text('Sobrenome'),
+
+              ],
+              ),
+            ),
+            Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: SizedBox(
+                            height: 38,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                labelText: 'Sobrenome',
+                                labelStyle: TextStyle(color: Colors.grey),
+                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black12, width: 2),
+                                  borderRadius: BorderRadius.circular(3),
+                                )
+                              ),
+                            ),
                           ),
                         ),
+                        SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(left: 19),
+              child: Row(children: [
+                Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
+                SizedBox(width: 3,),
+                Text('CPF'),
+
+              ],
+              ),
+            ),
+            Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: SizedBox(
+                            height: 38,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                labelText: 'CPF',
+                                labelStyle: TextStyle(color: Colors.grey),
+                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black12, width: 2),
+                                  borderRadius: BorderRadius.circular(3),
+                                )
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        Calendario(),
+
+                        SizedBox(height: 5,),
+
+                      Padding(
+              padding: const EdgeInsets.only(left: 19),
+              child: Row(children: [
+                Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
+                SizedBox(width: 3,),
+                Text('E-mail'),
+
+              ],
+              ),
+            ),
+            Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: SizedBox(
+                            height: 38,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                labelText: 'E-mail',
+                                labelStyle: TextStyle(color: Colors.grey),
+                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black12, width: 2),
+                                  borderRadius: BorderRadius.circular(3),
+                                )
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(height: 5,),
+
+                      Padding(
+              padding: const EdgeInsets.only(left: 19),
+              child: Row(children: [
+                Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
+                SizedBox(width: 3,),
+                Text('Telefone'),
+
+              ],
+              ),
+            ),
+            Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: SizedBox(
+                            height: 38,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                labelText: 'Telefone',
+                                labelStyle: TextStyle(color: Colors.grey),
+                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black12, width: 2),
+                                  borderRadius: BorderRadius.circular(3),
+                                )
+                              ),
+                            ),
+                          ),
+                        ),
+
                         SizedBox(height: 10,),
-                        Text(
-                          '    Ao cadastrar sua conta, você será capaz de',
-                          style: TextStyle(
-                           color: Color.fromARGB(255, 75, 74, 74),
-                            fontSize: 16,
+
+            Padding(
+              padding: EdgeInsets.only(right: 176),
+              child: Text('Sua senha de acesso',
+              style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Padding(
+              padding:  EdgeInsets.only(top: 1),
+            
+              child: Divider(color: Colors.black12,
+              thickness: 1,),
+            ),
+
+            SizedBox(height: 5,),
+
+                      Padding(
+              padding: const EdgeInsets.only(left: 19),
+              child: Row(children: [
+                Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
+                SizedBox(width: 3,),
+                Text('Senha'),
+
+              ],
+              ),
+            ),
+            Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: SizedBox(
+                            height: 38,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                labelText: 'Senha',
+                                labelStyle: TextStyle(color: Colors.grey),
+                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black12, width: 2),
+                                  borderRadius: BorderRadius.circular(3),
+                                )
+                              ),
+                            ),
                           ),
                         ),
-                        Text(
-                          '    comprar mais rápido, ficar atualizado sobre a',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 75, 74, 74),
-                            fontSize: 16,
+            SizedBox(height: 5,),
+
+                      Padding(
+              padding: const EdgeInsets.only(left: 19),
+              child: Row(children: [
+                Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
+                SizedBox(width: 3,),
+                Text('Repetir a Senha'),
+
+              ],
+              ),
+            ),
+            Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: SizedBox(
+                            height: 38,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                labelText: 'Repetir a Senha',
+                                labelStyle: TextStyle(color: Colors.grey),
+                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black12, width: 2),
+                                  borderRadius: BorderRadius.circular(3),
+                                )
+                              ),
+                            ),
                           ),
                         ),
-                        Text(
-                          '    situação de um pedido e acompanhar o histórico',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 75, 74, 74),
-                            fontSize: 16,
-                          ),
-                        ),
-                        Text(
-                          '    dos pedidos que você já fez.',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 75, 74, 74),
-                            fontSize: 16,
-                          ),
-                        ),
+
                         SizedBox(height: 10,),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16.0),
+
+            Padding(
+              padding: EdgeInsets.only(right: 260),
+              child: Text('Informativo',
+              style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Padding(
+              padding:  EdgeInsets.only(top: 1),
+            
+              child: Divider(color: Colors.black12,
+              thickness: 1,),
+            ),
+
+            SizedBox(height: 15,),
+
+            Padding(
+              padding: const EdgeInsets.only(right: 258),
+              child: Text('Deseja receber?'),
+            ),
+            RadioButtons(),
+
+            SizedBox(height: 20,),
+
+             Padding(
+                          padding: const EdgeInsets.only(left: 280.0),
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.of(context).pushReplacement(
@@ -286,127 +569,10 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 20,),
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 430,
-                    decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 238, 236, 236),
-                    border: Border.all(
-                      color: Colors.grey,
-                      width: 1.5,
-                    ),
-                    borderRadius: BorderRadius.circular(5.0)
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 20,),
-                        Text(
-                          '  Já é cliente? ',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 32,
-                          ),
-                        ),
-                        SizedBox(height: 7,),
-                        Text(
-                          '    Se você fez um pedido e cadastrou uma conta,',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 75, 74, 74),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          '    coloque os dados da conta abaixo:',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 75, 74, 74),
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Text(
-                          '     E-mail',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 75, 74, 74),
-                            fontSize: 14,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: 'E-mail',
-                              contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(3),
-                              )
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 10,),
-                        Text(
-                          '     Senha',
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 75, 74, 74),
-                            fontSize: 14,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: 'Senha',
-                              contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(3),
-                              )
-                            ),
-                          ),
-                        ),
 
-                        SizedBox(height: 10,),
-                        
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16.0),
-                          child: Text(
-                            'Solicitar nova senha',
-                            style: TextStyle(
-                             color: Color.fromARGB(255, 75, 74, 74),
-                              decoration: TextDecoration.underline,
-                              decorationColor: Colors.white
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 13,),  
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16.0),
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(builder: (context) => Destaques()),
-                              );
-                            },
-                            child: Text('Acessar'),
-                            style: ElevatedButton.styleFrom(
-                              foregroundColor: Colors.white,
-                              backgroundColor: Color.fromARGB(255, 41, 5, 70), // Cor do texto do botão
-                              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10), // Padding do botão
-                              shape: RoundedRectangleBorder(),
-                            ),
-                          ),
-                        ),
-                        
-                      ],
-                    ),
-                  ),
-                      SizedBox(height: 70,),
-                  Container(
+                        SizedBox(height: 30,),
+
+                        Container(
               width: MediaQuery.of(context).size.width,
               height: 850,
               color: Color.fromARGB(255, 33, 3, 58),
@@ -416,18 +582,32 @@ class _LoginState extends State<Login> {
                   SizedBox(height: 20,),
                   SizedBox(height: 20,),
                   Fim(),
-                ],
-              ),
-                  ),
-                ],
-              ),
-            ),
           ],
         ),
       ),
-    );
-  }
+     ]
+    ),
+   ),
+              ]
+              ),
+            ),
+  );
+ }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SearchBar extends StatefulWidget {
   @override
@@ -443,14 +623,14 @@ class _SearchBarState extends State<SearchBar> {
       controller: _controller,
       decoration: InputDecoration(
         hintText: 'Digite o que está procurando',
-        hintStyle: TextStyle(color: Colors.grey), 
+        hintStyle: TextStyle(color: Colors.grey), // Cor do texto do hint
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(0.0),
           borderSide: BorderSide.none,
         ),
         filled: true,
-        fillColor: Colors.white, 
-        contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+        fillColor: Colors.white,
+        contentPadding: EdgeInsets.symmetric(horizontal: 16.0), // Espaçamento interno
         suffixIcon: Container(
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 110, 66, 146),
@@ -459,14 +639,14 @@ class _SearchBarState extends State<SearchBar> {
               bottomRight: Radius.circular(0.0),
             ),
           ),
-          child: Icon(Icons.search, color: Colors.white,), 
+          child: Icon(Icons.search, color: Colors.white,), // Ícone de pesquisa
         ),
       ),
       onChanged: (value) {
-        
+        // Aqui você pode adicionar a lógica para pesquisar conforme o usuário digita
         print('Pesquisando por: $value');
       },
-      style: TextStyle(color: Colors.white), 
+      style: TextStyle(color: Colors.white), // Cor do texto
     );
   }
 
@@ -477,285 +657,136 @@ class _SearchBarState extends State<SearchBar> {
   }
 }
 
-class Fim extends StatelessWidget {
-  const Fim({super.key});
+
+class Calendario extends StatefulWidget {
+  @override
+  _MyCustomWidgetState createState() => _MyCustomWidgetState();
+}
+
+class _MyCustomWidgetState extends State<Calendario> {
+  TextEditingController _dateController = TextEditingController();
+
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(1900),
+      lastDate: DateTime(2100),
+    );
+    if (picked != null) {
+      setState(() {
+        _dateController.text = "${picked.toLocal()}".split(' ')[0];
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Column(
-  children: [
-    Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'ONDE ESTAMOS',
-                style: TextStyle(
-                  fontSize: 19,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            SizedBox(height: 5),
-            Row(
-              children: [
-                Icon(Icons.location_on,
-                color: Colors.white,
-                size: 18,
-                ),
-            Text(
-              'Av. João Vieira Carneiro, 306 - João Pessoa/PB',
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.white,
-              ),
-            ),
-            ]
-           ),
-            SizedBox(height: 9),
-            Row(
-              children: [
-                Icon(Icons.local_post_office,
-                color: Colors.white,
-                size: 18,
-                ),
-            Text(
-              ' contato@chegouafeira.com.br',
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.white,
-              ),
-            ),
-            ]
-           ),
-            SizedBox(height: 9),
-            Row(
-              children: [
-                Icon(Icons.business,
-                color: Colors.white,
-                size: 18,
-                ),
-            Text(
-              ' 52.969.955/0001-55',
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.white,
-              ),
-            ),
-            ]
-           ),
-            SizedBox(height: 9),
-            Row(
-              children: [
-                FaIcon(
-                  FontAwesomeIcons.whatsapp,
-                  color: Colors.white, 
-                  size: 18,
-                ),
-            Text(
-              ' (83) 3021-4132 | 98840-4132',
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.white,
-              ),
-            ),
-            ]
-           ),
-           SizedBox(height: 5,),
-           Text(
-              'INSTITUCIONAL',
-              style: TextStyle(
-                fontSize: 19,
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(height: 5,),
-            Row(
-              children: [
-                Text('O Chegou a Feira',
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.white
-                ),),],),
-                SizedBox(height: 5,),
-                Row(
-                  children: [
-                Text('Como Comprar',
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.white
-                ),),],),
-                SizedBox(height: 5,),
-                 Row(
-                  children: [
-                Text('Termos e Condições',
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.white
-                ),),],),
-                SizedBox(height: 5,),
-                 Row(
-                  children: [
-                Text('Entre em Contato',
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.white
-                ),),]),
-                SizedBox(height: 5,),
-                Text(
-              'AVISOS',
-              style: TextStyle(
-                fontSize: 19,
-                color: Colors.white,
-              ),
-            ),
-                SizedBox(height: 5,),
-                Text(
-              'AVISOS',
-              style: TextStyle(
-                fontSize: 19,
-                color: Colors.white,
-              ),
-            ),
-                SizedBox(height: 5,),
-                Text(
-              '* imagens meramente ilustrativas',
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.white,
-              ),
-            ),
-                SizedBox(height: 5,),
-                Text(
-              'Venda sujeita à disponibilidade de estoque no dia da',
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.white,
-              ),
-            ),
-                Text(
-              'entrega. No caso de faltar algum produto, este não será',
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.white,
-              ),
-            ),
-                Text(
-              'entregue e o valor correspondente não será cobrado.',
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(height: 10,),
-            
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                           width: 370,
-                          height: 25,
-                          decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 33, 3, 58),
-                            ),
-                          child: Divider(color: Colors.grey,),
-              
-                  ),
-            ),
+        Padding(
+              padding: const EdgeInsets.only(left: 19),
+              child: Row(children: [
+                Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
+                SizedBox(width: 3,),
+                Text('Data de nascimento'),
 
-            SizedBox(height: 10,),
-
-            Image.asset(
-                      'assets/images/logo.png',
-                      width: 130,
-                      height: 70,
-                    ),
-              Text('Todos os direitos reservados',
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.white
-              ),),
-              Text('Chegou a Feira © 2024',
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.white
-              ),),
-           Image.asset(
-                      'assets/images/formas.png',
-                      width: MediaQuery.of(context).size.width,
-                      height: 40,
-                    ),
-            Row(
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width, // Largura total da tela
-                    height: 40, // Altura da imagem
-                    child: Align(
-                      alignment: Alignment.centerLeft, // Alinha a imagem à esquerda
-                      child: Image.asset(
-                        'assets/images/pagseguro.png',
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-                          Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                           width: 370,
-                          height: 25,
-                          decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 33, 3, 58),
-                            ),
-                          child: Divider(color: Colors.grey,),
-              
-                  ),
-            ),
-
-              SizedBox(height: 10,),
-              
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                 
-                   IconButton(
-                    
-                    onPressed: (){}, 
-                    icon: Icon(Icons.facebook,
-                    size: 30,
-                    color: Colors.white,
-                    ),
-                   ),
-                   IconButton(
-                    
-                    onPressed: (){}, 
-                    icon: Icon(Icons.camera_alt_outlined,
-                    size: 30,
-                    color: Colors.white,
-                    ),
-                   ),
-                   Positioned(
-                    top: 0,
-                    right: 0, 
-                    child: 
-                    Image.asset(
-                      'assets/images/pbsoft.png',
-                      width: 200 ,
-                     height: 50 ,
-                      ),
-                   ),
-                  ], 
-                ),
               ],
+              ),
             ),
-          ],
+            
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            children: [
+              Expanded(
+                child: SizedBox(
+                  height: 38,
+                  child: TextFormField(
+                    controller: _dateController,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(3),
+                      ),
+                      
+                      hintText: 
+                      'Data de nascimento',
+                      hintStyle: TextStyle(color: Colors.grey)
+                    ),
+                    readOnly: true,
+                  ),
+                ),
+              ),
+              Container(
+                height: 38,
+                child: ElevatedButton(
+                  onPressed: () => _selectDate(context),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.teal,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(3),
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.calendar_month_sharp,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );
-  
+  }
+}
 
+class RadioButtons extends StatefulWidget {
+  @override
+  _RadioButtonsState createState() => _RadioButtonsState();
+}
+
+class _RadioButtonsState extends State<RadioButtons> {
+  String _selectedOption = 'Não';
+
+  void _handleRadioValueChange(String? value) {
+    setState(() {
+      if (value != null) {
+        _selectedOption = value;
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 240),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            children: [
+              Radio<String>(
+                value: 'Sim',
+                groupValue: _selectedOption,
+                onChanged: _handleRadioValueChange,
+              ),
+              Text('Sim'),
+            ],
+          ),
+          Row(
+            children: [
+              Radio<String>(
+                value: 'Não',
+                groupValue: _selectedOption,
+                onChanged: _handleRadioValueChange,
+              ),
+              Text('Não'),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
