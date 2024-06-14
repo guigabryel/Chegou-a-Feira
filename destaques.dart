@@ -2069,18 +2069,18 @@ class _DestaquesState extends State<Destaques> {
                           ),
                         child: Divider(color: Colors.black12,),
 
-    ),
+                      ),
                         Container(
                           width: 180,
                         height: 100,
                           child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
+                    )
+                  ]
+                ),
+              ],
             ),           
           ),
-       ],
+        ],
       ),
       //ATÉ AQUI
       //AQUI
@@ -2129,14 +2129,13 @@ class _DestaquesState extends State<Destaques> {
                               color: Color.fromARGB(255, 156, 16, 16),
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
-                            ),
-                           ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                            
-        ],
-       ),
-      ),
-     ),
+                        ),
+                      ),
                         SizedBox(height: 15,),
 
                         Container(
@@ -2147,17 +2146,17 @@ class _DestaquesState extends State<Destaques> {
                           ),
                         child: Divider(color: Colors.black12,),
 
-    ),
+                              ),
                         Container(
                           width: 180,
                         height: 100,
                           child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
-            ),           
-          ),
+                            )
+                          ]
+                        ),
+                      ],
+                    ),
+                  ),
           Container(
             width: 190,
             height: 400,
@@ -2178,11 +2177,6 @@ class _DestaquesState extends State<Destaques> {
                     Stack(
                       children: [
                     Image.asset('assets/images/coco.png', ),
-                    
-
-                    
-
-
                     ],
                     ),
                     SizedBox(height: 10,),
@@ -2207,14 +2201,13 @@ class _DestaquesState extends State<Destaques> {
                               color: Color.fromARGB(255, 156, 16, 16),
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
+                                ),
+                              ),
                             ),
-                           ),
-                          ),
-                            
-        ],
-       ),
-      ),
-     ),
+                           ],
+                         ),
+                       ),
+                     ),
                         SizedBox(height: 14,),
 
                         Container(
@@ -2225,18 +2218,18 @@ class _DestaquesState extends State<Destaques> {
                           ),
                         child: Divider(color: Colors.black12,),
 
-    ),
+                      ),
                         Container(
                           width: 180,
                         height: 100,
                           child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
+                    )
+                  ]
+                ),
+              ],
             ),           
           ),
-       ],
+        ],
       ),
       //ATÉ AQUI
       //AQUI
@@ -2285,14 +2278,13 @@ class _DestaquesState extends State<Destaques> {
                               color: Color.fromARGB(255, 156, 16, 16),
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
+                               ),
+                              ),
                             ),
-                           ),
-                          ),
-                            
-        ],
-       ),
-      ),
-     ),
+                          ],
+                         ),
+                       ),
+                     ),
                         SizedBox(height: 15,),
 
                         Container(
@@ -2303,15 +2295,15 @@ class _DestaquesState extends State<Destaques> {
                           ),
                         child: Divider(color: Colors.black12,),
 
-    ),
+                      ),
                         Container(
                           width: 180,
                         height: 100,
                           child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
+                    )
+                  ]
+                ),
+              ],
             ),           
           ),
           Container(
@@ -2334,12 +2326,7 @@ class _DestaquesState extends State<Destaques> {
                     Stack(
                       children: [
                     Image.asset('assets/images/abacaxi.png', ),
-                    
-
-                    
-
-
-                    ],
+                      ],
                     ),
                     SizedBox(height: 10,),
                     
@@ -2363,14 +2350,13 @@ class _DestaquesState extends State<Destaques> {
                               color: Color.fromARGB(255, 156, 16, 16),
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
+                                ),
+                              ),
                             ),
-                           ),
-                          ),
-                            
-        ],
-       ),
-      ),
-     ),
+                          ],
+                         ),
+                       ),
+                     ),
                         SizedBox(height: 14,),
 
                         Container(
@@ -2381,19 +2367,19 @@ class _DestaquesState extends State<Destaques> {
                           ),
                         child: Divider(color: Colors.black12,),
 
-    ),
+                          ),
                         Container(
                           width: 180,
                         height: 100,
                           child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
-            ),           
-          ),
-       ],
-      ),
+                           )
+                         ]
+                       ),
+                     ],
+                   ),           
+                 ),
+               ],
+             ),
       //ATÉ AQUI
       //AQUI
       Row(
@@ -2449,14 +2435,14 @@ class _DestaquesState extends State<Destaques> {
                               color: Color.fromARGB(255, 156, 16, 16),
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
+                                ),
+                              ),
                             ),
-                           ),
-                          ),
-                            
-        ],
-       ),
-      ),
-     ),
+                          ],
+                        ),
+                      ),
+                    ),
+
                         SizedBox(height: 15,),
 
                         Container(
@@ -2467,15 +2453,15 @@ class _DestaquesState extends State<Destaques> {
                           ),
                         child: Divider(color: Colors.black12,),
 
-    ),
+                      ),
                         Container(
                           width: 180,
                         height: 100,
                           child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
+                    )
+                  ]
+                ),
+              ],
             ),           
           ),
           Container(
@@ -2498,12 +2484,7 @@ class _DestaquesState extends State<Destaques> {
                     Stack(
                       children: [
                     Image.asset('assets/images/amarela.png', ),
-                    
-
-                    
-
-
-                    ],
+                      ],
                     ),
                     SizedBox(height: 10,),
                     
@@ -2531,14 +2512,13 @@ class _DestaquesState extends State<Destaques> {
                               color: Color.fromARGB(255, 156, 16, 16),
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
+                                ),
+                              ),
                             ),
-                           ),
-                          ),
-                            
-        ],
-       ),
-      ),
-     ),
+                          ],
+                        ),
+                      ),
+                    ),
                         SizedBox(height: 14,),
 
                         Container(
@@ -2549,18 +2529,18 @@ class _DestaquesState extends State<Destaques> {
                           ),
                         child: Divider(color: Colors.black12,),
 
-    ),
+                        ),
                         Container(
                           width: 180,
                         height: 100,
                           child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
+                    )
+                  ]
+                ),
+              ],
             ),           
           ),
-       ],
+        ],
       ),
       //ATÉ AQUI
             //AQUI
@@ -2596,23 +2576,18 @@ class _DestaquesState extends State<Destaques> {
                         color: Color.fromARGB(255, 41, 5, 70),
                       ),
                       child: Center(
-                        
                         child: Text('PROMOÇÃO',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11
-                      ),
-                     ),
+                            ),
+                          ),
+                        ),
+                      ), 
                     ),
-                   ), 
-                  ),
-
-                    
-
-
-                    ],
-                    ),
+                  ],
+                ),
                     SizedBox(height: 10,),
                     
                     Padding(
@@ -2636,8 +2611,8 @@ class _DestaquesState extends State<Destaques> {
                               color: Color.fromARGB(255, 156, 16, 16),
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
+                              ),
                             ),
-                           ),
                           ),
                             SizedBox(width: 10,),
                             Container(
@@ -2647,20 +2622,17 @@ class _DestaquesState extends State<Destaques> {
                           color: Color.fromARGB(255, 202, 24, 24),
                         ),
                         child: Stack(
-                          
                           children: [
-                            
                             Align(
                               alignment: Alignment.center,
-                            
                             child: Text('R\$7,99',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.bold
+                          ),
                         ),
-                       ),
                       ),
                        Positioned(
                         left: 9,
@@ -2668,16 +2640,17 @@ class _DestaquesState extends State<Destaques> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 12
+                           ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ), 
+                ],
               ),
-             ),
             ),
-           ],
           ),
-         ), 
-        ],
-       ),
-      ),
-     ),
+
                         SizedBox(height: 20,),
 
                         Container(
@@ -2687,16 +2660,15 @@ class _DestaquesState extends State<Destaques> {
                         color: Colors.white
                           ),
                         child: Divider(color: Colors.black12,),
-
-    ),
+                        ),
                         Container(
                           width: 180,
                         height: 100,
                           child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
+                    )
+                  ]
+                ),
+              ],
             ),           
           ),
           Container(
@@ -2717,10 +2689,8 @@ class _DestaquesState extends State<Destaques> {
                         height: 10,
                         decoration: BoxDecoration(
                         color: Colors.white
-                          ),
-                          
+                      ),
                     ),
-              
                       Container(
                          width: double.infinity,
                         height: 60,
@@ -2730,17 +2700,16 @@ class _DestaquesState extends State<Destaques> {
                          child: Padding(
                            padding: const EdgeInsets.all(10.0),
                            child: Container(
-                           
-                            child: Divider(color: Colors.black12,)),
-                         ),
+                            child: Divider(color: Colors.black12,)
+                      ),
+                    ),
                   ),
                   Container(
                       width: double.infinity,
                         height: 40,
                         decoration: BoxDecoration(
                         color: Colors.white
-                          ),
-                          
+                      ),
                     ),
                     Container(
               width: MediaQuery.of(context).size.width,
@@ -2752,13 +2721,11 @@ class _DestaquesState extends State<Destaques> {
                   SizedBox(height: 20,),
                   SizedBox(height: 20,),
                   Fim(),
-                ],
-              ),
-                  ),
+        ],
+       ),
+      ),
      ],
-    
     ),
-    
    ),
   );
  }
@@ -2811,14 +2778,14 @@ class _SearchBarState extends State<SearchBar> {
       controller: _controller,
       decoration: InputDecoration(
         hintText: 'Digite o que está procurando',
-        hintStyle: TextStyle(color: Colors.grey), // Cor do texto do hint
+        hintStyle: TextStyle(color: Colors.grey),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(0.0),
           borderSide: BorderSide.none,
         ),
         filled: true,
         fillColor: Colors.white,
-        contentPadding: EdgeInsets.symmetric(horizontal: 16.0), // Espaçamento interno
+        contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
         suffixIcon: Container(
           decoration: BoxDecoration(
             color: Color.fromARGB(255, 110, 66, 146),
@@ -2827,14 +2794,13 @@ class _SearchBarState extends State<SearchBar> {
               bottomRight: Radius.circular(0.0),
             ),
           ),
-          child: Icon(Icons.search, color: Colors.white,), // Ícone de pesquisa
+          child: Icon(Icons.search, color: Colors.white,),
         ),
       ),
       onChanged: (value) {
-        // Aqui você pode adicionar a lógica para pesquisar conforme o usuário digita
         print('Pesquisando por: $value');
       },
-      style: TextStyle(color: Colors.white), // Cor do texto
+      style: TextStyle(color: Colors.white),
     );
   }
 
@@ -2858,16 +2824,18 @@ int _counter = 0;
   void _incrementCounter() {
     setState(() {
       _counter++;
-    });
-  }
+    }
+  );
+}
 
   void _decrementCounter() {
     setState(() {
       if (_counter > 0) {
         _counter--;
       }
-    });
-  }
+    }
+  );
+}
 
   @override
   Widget build(BuildContext context) {
@@ -2902,7 +2870,6 @@ int _counter = 0;
         ),
         ElevatedButton(
           onPressed: () {
-            // Adicione a ação do botão aqui
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.lightBlue, 
@@ -2917,5 +2884,5 @@ int _counter = 0;
         ),
       ],
     );
-  }}
-
+  }
+}
