@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     debugShowCheckedModeBanner: false,
     title: 'Página Principal',
     theme: ThemeData(primarySwatch: Colors.blue),
-    home: Login(),
+    home: Destaques(),
   );
   }
   }
