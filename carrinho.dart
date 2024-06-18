@@ -257,14 +257,14 @@ class _CarrinhoState extends State<Carrinho> {
            Container(
             width: MediaQuery.of(context).size.width,
             height: 30,
-            color: Colors.white,
+            color: Colors.black26,
            ),
 
 
       Container(
          width: MediaQuery.of(context).size.width,
          height: 35,
-         color: Colors.white,
+            color: Colors.black26,
             
          
          child: 
@@ -315,7 +315,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -401,7 +401,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -490,7 +490,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -579,7 +579,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -668,7 +668,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -757,7 +757,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -846,7 +846,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -935,7 +935,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1024,7 +1024,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1113,7 +1113,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1202,7 +1202,7 @@ class _CarrinhoState extends State<Carrinho> {
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
-            color: Colors.white,
+            color: Colors.black26,
 
            child: Row( 
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1288,7 +1288,45 @@ class _CarrinhoState extends State<Carrinho> {
           ],
          ),
         ),
-        Text('data')
+        Container(
+          
+          width: double.infinity,
+          height: 50,
+          color: Colors.black26,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Row(
+              children: [
+                SizedBox(height: 15,),
+                Icon(Icons.lightbulb_outlined, color: Color.fromARGB(255, 110, 66, 146),),
+                Text('Produtos mais comprados nessa loja', style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black
+             ),
+            ),
+           ],
+          ),
+         ),
+        ),
+        Container(
+          width: double.infinity,
+          height: 300,
+          color: Colors.black26,
+          child: Padding(
+            padding: const EdgeInsets.all(17.0),
+            child: Container(
+              width: 10,
+              height: 100,
+              color: Colors.white,
+              child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/images/leite.png', width: 50,)
+                ],
+              ),
+            ),
+          ),
+        ),
        ]
       ),
      ),
