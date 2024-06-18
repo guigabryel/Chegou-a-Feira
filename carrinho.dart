@@ -222,7 +222,7 @@ class _CarrinhoState extends State<Carrinho> {
           ),
           SizedBox(width: 5,),
                       Text(
-                        'R\$116,74',
+                        'R\$112,05',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -302,7 +302,7 @@ class _CarrinhoState extends State<Carrinho> {
                 ),
                 child: Center(
                   child: Padding(
-                  padding: const EdgeInsets.only(right: 220),
+                  padding: const EdgeInsets.only(right: 210),
                   child: Text('Produto'),
                  ),
                 ),
@@ -314,7 +314,7 @@ class _CarrinhoState extends State<Carrinho> {
 
          Container(
           width: MediaQuery.of(context).size.width,
-            height: 200,
+            height: 130,
             color: Colors.white,
 
            child: Row( 
@@ -355,20 +355,940 @@ class _CarrinhoState extends State<Carrinho> {
                                width: 1
                   )
                 ),
-                child: Center(
-                  child: Padding(
-                  padding: const EdgeInsets.only(right: 100),
-                  child: Container(
-                        width: 330,
-                      height: 100,
-                        child: QuantitySelector3(),
-                      ),
-                 ),
-                ),
-               ),
-              ],
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Text('Sabão Liquido Becker 3L'),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$18,99')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$37,98')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
             ),
+           ),
+          ],
          ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/biscoito.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 2),
+                            child: Text('Biscoito Vitarella 350g '),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$4,89')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$14,67')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/palha.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 7),
+                            child: Text('Batata Palha Scrusch 80g '),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$4,29')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$8,58')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/macarrao.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 7),
+                            child: Text('Macarrão Espaguete Fino'),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$2,69')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$10,76')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/limao.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 0),
+                            child: Text('Detergente Invicto limão'),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$1,99')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$1,99')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/neutro.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 0),
+                            child: Text('Detergente Invicto neutro'),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$1,99')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$3,98')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/marca.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 0),
+                            child: Text('Detergente Invicto maçã'),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$1,99')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$1,99')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/neutro.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 0),
+                            child: Text('Detergente Invicto neutro'),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$1,99')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$3,98')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/banana.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 40),
+                            child: Text('Banana Maçã 1Kg'),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$9,60')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$9,60')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/maca.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 60),
+                            child: Text('Maçã Fuji 500g'),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$8,85')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$17,7')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+         Container(
+          width: MediaQuery.of(context).size.width,
+            height: 130,
+            color: Colors.white,
+
+           child: Row( 
+            crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+               Padding(
+                 padding: const EdgeInsets.only(left: 15),
+                 child: Container(
+                  width: 70,
+                  height: 130,
+                  decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                             color: Colors.white,
+                             border: Border.all(
+                color: Colors.black12,
+                width: 1
+                    )
+                  ),
+                    child: Image.asset('assets/images/cebola.png',))
+                  
+                 ),
+               ),
+               Container(
+                width: 290,
+                height: 130,
+                decoration: BoxDecoration(
+                           color: Colors.white,
+                           border: Border.all(
+                               color: Colors.black12,
+                               width: 1
+                  )
+                ),
+                child: Padding(
+                padding: const EdgeInsets.only(right: 100),
+                child: Container(
+                      width: 330,
+                    height: 100,
+                      child:
+                      Column(
+                        children: [
+                          SizedBox(height: 4,),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 60),
+                            child: Text('Maçã Fuji 500g'),
+                          ),
+                          SizedBox(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                Text('Preço: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$4,80')
+                              ],
+                            ),
+                          ),
+                          QuantitySelector3(),
+                          SizedBox(height: 1,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 14),
+                            child: Row(
+                              children: [
+                                 Text('Total: ', style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                                ),),
+                                Text('R\$14,4')
+                              ],
+                            ),
+                          ),
+               ],
+              ),
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+        Text('data')
        ]
       ),
      ),
@@ -398,7 +1318,7 @@ class QuantitySelector3 extends StatefulWidget {
 }
 
 class _QuantitySelectorState extends State<QuantitySelector3> {
-int _counter = 0;
+int _counter = 1;
 
   void _incrementCounter() {
     setState(() {
@@ -416,63 +1336,134 @@ int _counter = 0;
 
 @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-      ),
-      child: Row(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
-              borderRadius: BorderRadius.circular(20.0),
-              color: Colors.white,
-            ),
-            child: IconButton(
-              icon: Icon(Icons.remove, size: 15,),
-              onPressed: _decrementCounter,
-              color: Colors.black,
-            ),
-          ),
-          Expanded(
-            child: Center(
-              child: Text(
-                '$_counter',
-                style: TextStyle(fontSize: 20.0),
+    return SizedBox(
+      height: 50.0,
+      child: Container(
+        decoration: BoxDecoration(
+        ),
+        child: Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: IconButton(
+                icon: Icon(Icons.remove,),
+                onPressed: _decrementCounter,
+                color: Colors.black,
               ),
             ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
-              borderRadius: BorderRadius.circular(20.0),
-              color: Colors.white,
+            Expanded(
+              child: Center(
+                child: Text(
+                  '$_counter',
+                  style: TextStyle(fontSize: 18.0),
+                ),
+              ),
             ),
-            child: IconButton(
-              icon: Icon(Icons.add),
-              onPressed: _incrementCounter,
-              color: Colors.black,
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: IconButton(
+                icon: Icon(Icons.add),
+                onPressed: _incrementCounter,
+                color: Colors.black,
+              ),
             ),
-          ),
-          SizedBox(width: 20,),
-          Container(
-            height: 48.0,
-            decoration: BoxDecoration(
-              color: Colors.lightBlue,
-              border: Border.all(color: Colors.lightBlue),
-              borderRadius: BorderRadius.circular(20.0),
+            SizedBox(width: 0,),
+            Container(
+              height: 39.0,
+              child: IconButton(
+                icon: Icon(Icons.close),
+                onPressed: () {
+                },
+                color: Colors.red,
+              ),
             ),
-            child: IconButton(
-              icon: Icon(Icons.shopping_cart),
-              onPressed: () {
-              },
-              color: Colors.white,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
+class QuantitySelector1 extends StatefulWidget {
+  @override
+  _QuantitySelectorState createState() => _QuantitySelectorState();
+}
+
+class _QuantitySelector1State extends State<QuantitySelector1> {
+int _counter = 1;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  void _decrementCounter() {
+    setState(() {
+      if (_counter > 0) {
+        _counter--;
+      }
+    });
+  }
+
+@override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 50.0,
+      child: Container(
+        decoration: BoxDecoration(
+        ),
+        child: Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: IconButton(
+                icon: Icon(Icons.remove,),
+                onPressed: _decrementCounter,
+                color: Colors.black,
+              ),
+            ),
+            Expanded(
+              child: Center(
+                child: Text(
+                  '$_counter',
+                  style: TextStyle(fontSize: 18.0),
+                ),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: IconButton(
+                icon: Icon(Icons.add),
+                onPressed: _incrementCounter,
+                color: Colors.black,
+              ),
+            ),
+            SizedBox(width: 0,),
+            Container(
+              height: 39.0,
+              child: IconButton(
+                icon: Icon(Icons.close),
+                onPressed: () {
+                },
+                color: Colors.red,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
 
 
 
