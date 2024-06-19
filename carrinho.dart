@@ -1,5 +1,6 @@
 import 'package:chegou_a_feira/barra.dart';
 import 'package:chegou_a_feira/destaques.dart';
+import 'package:chegou_a_feira/login.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -277,12 +278,14 @@ class _CarrinhoState extends State<Carrinho> {
                child: Container(
                 width: 70,
                 height: 35,
-                decoration: BoxDecoration(
-                           color: Colors.white,
-                           border: Border.all(
+                decoration: 
+                BoxDecoration(
+              color: Colors.white,
+              border: Border.all(
+                           
               color: Colors.black12,
               width: 1
-                  )
+                  ),
                 ),
                 child: Center(child: Text('Imagem'),),
                 
@@ -961,99 +964,10 @@ class _CarrinhoState extends State<Carrinho> {
                 width: 1
                     )
                   ),
-                    child: Image.asset('assets/images/neutro.png',))
-                  
-                 ),
-               ),
-               Container(
-                width: 290,
-                height: 130,
-                decoration: BoxDecoration(
-                           color: Colors.white,
-                           border: Border.all(
-                               color: Colors.black12,
-                               width: 1
-                  )
-                ),
-                child: Padding(
-                padding: const EdgeInsets.only(right: 100),
-                child: Container(
-                      width: 330,
-                    height: 100,
-                      child:
-                      Column(
-                        children: [
-                          SizedBox(height: 4,),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 0),
-                            child: Text('Detergente Invicto neutro'),
-                          ),
-                          SizedBox(height: 10,),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 14),
-                            child: Row(
-                              children: [
-                                Text('Preço: ', style: TextStyle(
-                                  fontWeight: FontWeight.bold
-                                ),),
-                                Text('R\$1,99')
-                              ],
-                            ),
-                          ),
-                          QuantitySelector3(),
-                          SizedBox(height: 1,),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 14),
-                            child: Row(
-                              children: [
-                                 Text('Total: ', style: TextStyle(
-                                  fontWeight: FontWeight.bold
-                                ),),
-                                Text('R\$3,98')
-                              ],
-                            ),
-                          ),
-               ],
-              ),
-             ),
-            ),
-           ),
-          ],
-         ),
-        ),
-         Container(
-          width: MediaQuery.of(context).size.width,
-            height: 130,
-            color: Colors.black26,
-
-           child: Row( 
-            crossAxisAlignment: CrossAxisAlignment.start,
-             children: [
-              
-               Padding(
-                 padding: const EdgeInsets.only(left: 15),
-                 child: Container(
-                  width: 70,
-                  height: 130,
-                  decoration: BoxDecoration(
-                             color: Colors.white,
-                             border: Border.all(
-                color: Colors.black12,
-                width: 1
+                    child: Image.asset('assets/images/banana.png',)
                     )
                   ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                             color: Colors.white,
-                             border: Border.all(
-                color: Colors.black12,
-                width: 1
-                    )
-                  ),
-                    child: Image.asset('assets/images/banana.png',))
-                  
                  ),
-               ),
                Container(
                 width: 290,
                 height: 130,
@@ -1097,19 +1011,20 @@ class _CarrinhoState extends State<Carrinho> {
                               children: [
                                  Text('Total: ', style: TextStyle(
                                   fontWeight: FontWeight.bold
-                                ),),
+                                ),
+                               ),
                                 Text('R\$9,60')
-                              ],
-                            ),
+                            ],
+                           ),
                           ),
-               ],
-              ),
-             ),
-            ),
-           ),
-          ],
-         ),
-        ),
+                        ],
+                       ),
+                      ),
+                     ),
+                    ),
+                   ],
+                  ),
+                 ),
          Container(
           width: MediaQuery.of(context).size.width,
             height: 130,
@@ -1252,8 +1167,8 @@ class _CarrinhoState extends State<Carrinho> {
                         children: [
                           SizedBox(height: 4,),
                           Padding(
-                            padding: const EdgeInsets.only(right: 60),
-                            child: Text('Maçã Fuji 500g'),
+                            padding: const EdgeInsets.only(right: 35),
+                            child: Text('Cebola Branca 500g'),
                           ),
                           SizedBox(height: 10,),
                           Padding(
@@ -1308,30 +1223,326 @@ class _CarrinhoState extends State<Carrinho> {
           ),
          ),
         ),
-        Container(
-          width: double.infinity,
-          height: 300,
-          color: Colors.black26,
-          child: Padding(
-            padding: const EdgeInsets.all(17.0),
+            Container(
+              width: double.infinity,
+              height: 330,
+              color: Colors.black26,
+              child: Padding(
+                padding: const EdgeInsets.all(17.0),
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.white,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 13),
+                            child: Image.asset('assets/images/leite.png', width: 50),
+                          ),
+                          SizedBox(width: 10), // Espaçamento entre a imagem e o texto
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 17),
+                                child: Text('Leite Cemil'),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 3),
+                                child: Text('Integral 1L'),
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 40),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 25),
+                            child: Text('R\$ 5,99', style: TextStyle(fontWeight: FontWeight.bold)),
+                          ),
+                          SizedBox(width: 13),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color.fromARGB(255, 176, 39, 69),
+                                padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 1.0),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                              ),
+                              onPressed: () {
+                                // Ação do botão
+                              },
+                              child: Text(
+                                'Adicionar',
+                                style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+          SizedBox(height: 5,),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
             child: Container(
-              width: 10,
-              height: 100,
-              color: Colors.white,
-              child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+                           width: 340,
+                          height: 5,
+                          decoration: BoxDecoration(
+                          color: Colors.white
+                            ),
+                          child: Divider(color: Colors.grey,),
+            
+                        ),
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 13),
+                child: Image.asset('assets/images/coco.png', width: 50),
+              ),
+              SizedBox(width: 10), 
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('assets/images/leite.png', width: 50,)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
+                    child: Text('Coco Seco'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 3),
+                    child: Text('Unidade'),
+                  ),
                 ],
               ),
-            ),
+              SizedBox(width: 43),
+              Padding(
+                padding: const EdgeInsets.only(top: 17),
+                child: Text('R\$ 2,99', style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              SizedBox(width: 13),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 176, 39, 69),
+                    padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 1.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  onPressed: () {
+                    // Ação do botão
+                  },
+                  child: Text(
+                    'Adicionar',
+                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
           ),
-        ),
-       ]
+
+          SizedBox(height: 5,),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Container(
+                           width: 340,
+                          height: 5,
+                          decoration: BoxDecoration(
+                          color: Colors.white
+                            ),
+                          child: Divider(color: Colors.grey,),
+            
+                        ),
+                       ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 13),
+                child: Image.asset('assets/images/beterraba.png', width: 50),
+              ),
+              SizedBox(width: 10), 
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
+                    child: Text('Beterraba'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 3),
+                    child: Text('500g'),
+                  ),
+                ],
+              ),
+              SizedBox(width: 48),
+              Padding(
+                padding: const EdgeInsets.only(top: 17),
+                child: Text('R\$ 7,99', style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              SizedBox(width: 13),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 176, 39, 69),
+                    padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 1.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  onPressed: () {
+                    // Ação do botão
+                  },
+                  child: Text(
+                    'Adicionar',
+                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 5,),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Container(
+                           width: 340,
+                          height: 5,
+                          decoration: BoxDecoration(
+                          color: Colors.white
+                            ),
+                          child: Divider(color: Colors.grey,),
+            
+                        ),
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 13),
+                child: Image.asset('assets/images/coentro.png', width: 50),
+              ),
+              SizedBox(width: 10), 
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
+                    child: Text('Coentro'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 3),
+                    child: Text('Unidade'),
+                  ),
+                ],
+              ),
+              SizedBox(width: 55),
+              Padding(
+                padding: const EdgeInsets.only(top: 17),
+                child: Text('R\$ 2,40', style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+              SizedBox(width: 13),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 176, 39, 69),
+                    padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 1.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  onPressed: () {
+                    // Ação do botão
+                  },
+                  child: Text(
+                    'Adicionar',
+                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 5,),
+
+        ],
       ),
-     ),
-    );
-  }
+    ),
+  ),
+),
+
+Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                height: 50,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Subtotal',
+                      style: TextStyle(fontSize: 17),
+                    ),
+                    Text(
+                      'R\$ 112,05',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color.fromARGB(255, 176, 39, 69),
+                  padding: EdgeInsets.symmetric(vertical: 14.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                onPressed: () {
+                  // Ação do botão
+                },
+                icon: Icon(Icons.shopping_cart, color: Colors.white),
+                label: Text(
+                  'Ir para o pagamento',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+             ),
+            ),
+           ),
+          ],
+         ),
+        ),
+        Container(
+              width: MediaQuery.of(context).size.width,
+              height: 850,
+              color: Color.fromARGB(255, 33, 3, 58),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 20,),
+                  SizedBox(height: 20,),
+                  Fim(),
+        ],
+       ),
+      ),
+     ]
+    ),
+   ),
+  );
+ }
 }
 
 
