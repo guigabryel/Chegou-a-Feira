@@ -2810,7 +2810,7 @@ class _SearchBarState extends State<SearchBar> {
       onChanged: (value) {
         print('Pesquisando por: $value');
       },
-      style: TextStyle(color: Colors.white),
+      style: TextStyle(color: Colors.black),
     );
   }
 
