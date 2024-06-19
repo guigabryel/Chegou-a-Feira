@@ -1,4 +1,5 @@
 import 'package:chegou_a_feira/barra.dart';
+import 'package:chegou_a_feira/carrinho.dart';
 import 'package:chegou_a_feira/destaques.dart';
 import 'package:chegou_a_feira/login.dart';
 import 'package:flutter/material.dart';
@@ -196,7 +197,16 @@ class Cadastro extends StatelessWidget {
               ),
                       ),
                   SizedBox(width: 80),
-              Column(
+             GestureDetector(
+                     onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Carrinho(),
+            ),
+          );
+        },
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -217,7 +227,7 @@ class Cadastro extends StatelessWidget {
           ),
           SizedBox(width: 5,),
                       Text(
-                        'R\$0,00',
+                        'R\$116,74',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -227,7 +237,8 @@ class Cadastro extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 10,),
-          ],
+            ],
+           ),
          ),      
         ],
        ),
@@ -730,7 +741,7 @@ class _MyCustomWidgetState extends State<Calendario> {
                   ),
                   child: Icon(
                     Icons.calendar_month_sharp,
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                 ),
               ),
