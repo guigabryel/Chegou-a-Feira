@@ -4,6 +4,7 @@ import 'package:chegou_a_feira/login.dart';
 import 'package:chegou_a_feira/produtos/sabao.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'carrinho.dart';
 
 class Destaques extends StatefulWidget {
   const Destaques({super.key});
@@ -204,7 +205,16 @@ class _DestaquesState extends State<Destaques> {
               ),
                       ),
                   SizedBox(width: 80),
-              Column(
+                  GestureDetector(
+                     onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Carrinho(),
+            ),
+          );
+        },
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -225,7 +235,7 @@ class _DestaquesState extends State<Destaques> {
           ),
           SizedBox(width: 5,),
                       Text(
-                        'R\$0,00',
+                        'R\$112,05',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -235,7 +245,8 @@ class _DestaquesState extends State<Destaques> {
                     ],
                   ),
                   SizedBox(height: 10,),
-          ],
+            ],
+           ),
          ),      
         ],
        ),
@@ -1996,11 +2007,11 @@ class _DestaquesState extends State<Destaques> {
                           width: 180,
                         height: 100,
                           child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
-            ),           
+                    )
+                  ]
+                ),
+              ],
+            ),
           ),
           Container(
             width: 190,
@@ -2022,13 +2033,8 @@ class _DestaquesState extends State<Destaques> {
                     Stack(
                       children: [
                     Image.asset('assets/images/beterraba.png', ),
-                    
-
-                    
-
-
                     ],
-                    ),
+                   ),
                     SizedBox(height: 10,),
                     
                     Padding(
@@ -2051,14 +2057,13 @@ class _DestaquesState extends State<Destaques> {
                               color: Color.fromARGB(255, 156, 16, 16),
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
+                                ),
+                              ),
                             ),
-                           ),
-                          ),
-                            
-        ],
-       ),
-      ),
-     ),
+                           ],
+                         ),
+                       ),
+                     ),
                         SizedBox(height: 14,),
 
                         Container(
@@ -2740,6 +2745,11 @@ class _darkMode {
 
 
 
+
+
+
+
+
 class Barra extends StatelessWidget {
   const Barra({super.key});
 
@@ -2884,5 +2894,34 @@ int _counter = 0;
         ),
       ],
     );
+  }
+}
+
+class Produto {
+  String nome;
+  double preco;
+  int quantidade;
+
+  Produto({required this.nome, required this.preco, this.quantidade = 1});
+}
+
+class CarrinhoModel extends ChangeNotifier {
+  List<Produto> _produtos = [];
+  double _total = 0.0;
+
+  List<Produto> get produtos => _produtos;
+
+  double get total => _total;
+
+  void adicionarProduto(Produto produto) {
+    _produtos.add(produto);
+    _total += produto.preco;
+    notifyListeners();
+  }
+
+  void removerProduto(Produto produto) {
+    _produtos.remove(produto);
+    _total -= produto.preco;
+    notifyListeners();
   }
 }
