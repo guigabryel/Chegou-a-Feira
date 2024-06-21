@@ -267,7 +267,7 @@ class _TesteState extends State<Teste> {
 
             Container(
               width: 600,
-              height: 1800,
+              height: 1290,
               decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: Colors.black12),
@@ -875,6 +875,142 @@ class _TesteState extends State<Teste> {
                           ),
                         child: Divider(color: Colors.black12,),
                       ),
+                  ],
+                 ),
+                 //AQUI
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 120,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              Image.asset('assets/images/maca.png',height: 90,width: 53,),
+                          
+                               VerticalDivider(
+                                    color: Colors.black,
+                                    thickness: 1,),
+
+                                Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 140),
+                                      child: Text('Maçã Fuji 500g'),
+                                    ),
+                                    
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 135),
+                                      child: Row(
+                                        children: [
+                                          Text('Preço: ', style: TextStyle(fontWeight: FontWeight.bold),),
+                                                                        
+                                          Padding(
+                                            padding: const EdgeInsets.only(right: 10),
+                                            child: Text('R\$ 8,85'),
+                                          ),
+                                           
+                                        ],
+                                      ),
+                                    ),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 50),
+                                  child: Container(
+                                  width: 200,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                  color: Colors.white,
+                                    ),
+                                  child: QuantitySelector3(),
+                                                            ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 150),
+                                  child: Row(
+                                  children: [
+                                    Text('Total: ', style: TextStyle(fontWeight: FontWeight.bold),),
+                                    Text('R\$ 17,7')
+                                      ],
+                          ),
+                         ),
+                        ],
+                       ),
+                      ],
+                     ),
+                    ),
+                   ),
+                   Container(
+                        width: 350,
+                        height: 5,
+                        decoration: BoxDecoration(
+                        color: Colors.white,
+                          ),
+                        child: Divider(color: Colors.black12,),
+                      ),
+                  ],
+                 ),
+                 //AQUI
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 120,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              Image.asset('assets/images/cebola.png',height: 90,width: 53,),
+                          
+                               VerticalDivider(
+                                    color: Colors.black,
+                                    thickness: 1,),
+
+                                Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 112),
+                                      child: Text('Cebola Branca 500g'),
+                                    ),
+                                    
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 135),
+                                      child: Row(
+                                        children: [
+                                          Text('Preço: ', style: TextStyle(fontWeight: FontWeight.bold),),
+                                                                        
+                                          Padding(
+                                            padding: const EdgeInsets.only(right: 10),
+                                            child: Text('R\$ 4,80'),
+                                          ),
+                                           
+                                        ],
+                                      ),
+                                    ),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 50),
+                                  child: Container(
+                                  width: 200,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                  color: Colors.white,
+                                    ),
+                                  child: QuantitySelector3(),
+                                                            ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 150),
+                                  child: Row(
+                                  children: [
+                                    Text('Total: ', style: TextStyle(fontWeight: FontWeight.bold),),
+                                    Text('R\$ 14,4')
+                                      ],
+                          ),
+                         ),
+                        ],
+                       ),
+                      ],
+                     ),
+                    ),
+                   ),
                   ],
                  ),
                  //AQUI
