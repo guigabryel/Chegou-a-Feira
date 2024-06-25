@@ -1,10 +1,11 @@
 import 'package:chegou_a_feira/barra.dart';
 import 'package:chegou_a_feira/cadastro.dart';
 import 'package:chegou_a_feira/login.dart';
+import 'package:chegou_a_feira/minhaconta.dart';
 import 'package:chegou_a_feira/produtos/sabao.dart';
+import 'package:chegou_a_feira/carrinho.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'carrinho.dart';
 
 class Destaques extends StatefulWidget {
   const Destaques({super.key});
@@ -31,7 +32,7 @@ class _DestaquesState extends State<Destaques> {
           SizedBox(width: 10,),
         ]
       ),
-      drawer: Drawer(
+            drawer: Drawer(
         
         child: ListView(
           padding: EdgeInsets.zero,
@@ -72,6 +73,21 @@ class _DestaquesState extends State<Destaques> {
             ),
             
             ListTile(
+              minTileHeight: 30,
+              leading: Icon(Icons.person, color: Colors.blue,),
+              title: Text('Minha Conta'),
+              onTap: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Conta()),
+                );
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(),
+            ),
+            ListTile(
+              minTileHeight: 30,
               leading: Icon(Icons.star, color: Colors.purple,),
               title: Text('DESTAQUES'),
               onTap: () {
@@ -85,6 +101,7 @@ class _DestaquesState extends State<Destaques> {
               child: Divider(),
             ),
             ListTile(
+              minTileHeight: 30,
               leading: Icon(Icons.local_bar, color: Colors.black,),
               title: Text('BEBIDAS'),
               onTap: () {
@@ -96,6 +113,7 @@ class _DestaquesState extends State<Destaques> {
               child: Divider(),
             ),
             ListTile(
+              minTileHeight: 30,
               leading: Icon(Icons.cookie, color: Color.fromARGB(255, 116, 58, 37),),
               title: Text('BEBIDAS E CHOCOLATES'),
               onTap: () {
@@ -107,6 +125,7 @@ class _DestaquesState extends State<Destaques> {
               child: Divider(),
             ),
             ListTile(
+              minTileHeight: 30,
               leading: FaIcon(FontAwesomeIcons.cheese, color: Color.fromARGB(255, 197, 191, 131),),
               title: Text('FRIO E LATICÍNIOS'),
               onTap: () {
@@ -118,6 +137,7 @@ class _DestaquesState extends State<Destaques> {
               child: Divider(),
             ),
             ListTile(
+              minTileHeight: 30,
               leading: FaIcon(FontAwesomeIcons.soap, color: Colors.blue,),
               title: Text('HIGIENE E BELEZA'),
               onTap: () {
@@ -129,6 +149,7 @@ class _DestaquesState extends State<Destaques> {
               child: Divider(),
             ),
             ListTile(
+              minTileHeight: 30,
               leading: FaIcon(FontAwesomeIcons.appleAlt, color: Color.fromARGB(255, 17, 88, 19),),
               title: Text('HOTIFRUTI'),
               onTap: () {
@@ -140,6 +161,7 @@ class _DestaquesState extends State<Destaques> {
               child: Divider(),
             ),
             ListTile(
+              minTileHeight: 30,
               leading: FaIcon(FontAwesomeIcons.sprayCan, color: Colors.lightBlue,),
               title: Text('LIMPEZA'),
               onTap: () {
@@ -151,6 +173,7 @@ class _DestaquesState extends State<Destaques> {
               child: Divider(),
             ),
             ListTile(
+              minTileHeight: 30,
               leading: FaIcon(FontAwesomeIcons.shoppingBasket, color: Colors.green,),
               title: Text('MERCEARIA'),
               onTap: () {
@@ -162,6 +185,7 @@ class _DestaquesState extends State<Destaques> {
               child: Divider(),
             ),
             ListTile(
+              minTileHeight: 30,
               leading: FaIcon(FontAwesomeIcons.breadSlice, color: const Color.fromARGB(255, 187, 109, 80),),
               title: Text('PADARIA'),
               onTap: () {
@@ -173,6 +197,7 @@ class _DestaquesState extends State<Destaques> {
               child: Divider(),
             ),
             ListTile(
+              minTileHeight: 30,
               leading: FaIcon(FontAwesomeIcons.paw, color: Colors.brown,),
               title: Text('UTILIDADES E PETSHOP'),
               onTap: () {
@@ -182,6 +207,7 @@ class _DestaquesState extends State<Destaques> {
           ],
         ),
       ),
+
       
             body: SingleChildScrollView(
               child:  Column(
@@ -210,7 +236,7 @@ class _DestaquesState extends State<Destaques> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => Carrinho(),
+              builder: (context) => Meucarrinho(),
             ),
           );
         },
