@@ -81,8 +81,8 @@ class _AlertasState extends State<Alertas> {
                 );
               },
                 child: Center(child: Text('Ativar alertas', style: TextStyle(color: Colors.white, fontSize: 15,fontWeight: FontWeight.bold),)),
+           ),
           ),
-              ),
          ],
         ),
        ),
@@ -98,5 +98,5 @@ class _AlertasState extends State<Alertas> {
     ),
    ),
   );
-  }
+ }
 }
