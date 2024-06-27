@@ -58,10 +58,10 @@ class _FavoritosState extends State<Favoritos> {
                 ],
               ),
               Text('com seus produtos prediletos.', style: TextStyle(fontSize: 14),)
-                   ],
-                  ),
-         ),
-      ),
+             ],
+            ),
+           ),
+          ),
       Container(
           width: double.infinity,
          height: 200,
@@ -73,5 +73,5 @@ class _FavoritosState extends State<Favoritos> {
     ),
    ),
   );
-  }
+ }
 }
