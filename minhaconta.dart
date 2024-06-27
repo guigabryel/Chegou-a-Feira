@@ -69,15 +69,15 @@ class _ContaState extends State<Conta> {
                    ),
                   ),
                         
-                  SizedBox(height: 4,),
-                        
-                   Text('E-mail do Cliente',),
+                SizedBox(height: 4,),
+                     
+                Text('E-mail do Cliente',),
 
-                   SizedBox(height: 10,),
+                SizedBox(height: 10,),
                         
             Divider(),
 
-Row(
+          Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Padding(
@@ -92,8 +92,8 @@ Row(
                   width: 60,
                   child: Image.asset('assets/images/estrela.png'),
                 ),
+               ),
               ),
-            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
@@ -106,8 +106,8 @@ Row(
                   width: 60,
                   child: Image.asset('assets/images/coracao.png'),
                 ),
+               ),
               ),
-            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
@@ -119,11 +119,11 @@ Row(
                 child: Container(
                   width: 60,
                   child: Image.asset('assets/images/sino.png'),
-                ),
               ),
+             ),
             ),
-          ],
-        ),
+           ],
+          ),
            Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -189,7 +189,7 @@ Row(
               },
                 child: Text('Alertas'),
               ),
-              ),
+             ),
             ],
            ),
 
@@ -267,18 +267,18 @@ Row(
                 leading: FaIcon(FontAwesomeIcons.signOutAlt, color: Colors.grey),
                 title: Text('Sair'),
                 onTap: () {
-                  
-                },
-              ),
-            ],
+                
+             },
+            ),
+           ],
           ),
+         ),
         ),
-           ),
-         ),        
-                     Fim(),
-       ]
-      ),
-     ),
-    );
-  }
+       ),
+                   Fim(),
+     ]
+    ),
+   ),
+  );
+ }
 }
