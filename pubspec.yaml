@@ -102,6 +102,7 @@ flutter:
       - assets/images/coracao1.png
       - assets/images/sino.png
       - assets/images/sino1.png
+      - assets/images/cupons.png
       
 
   # An image asset can refer to one or more resolution-specific "variants", see
