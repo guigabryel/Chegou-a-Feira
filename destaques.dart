@@ -6,7 +6,7 @@ import 'components/botaodestaques.dart';
 import 'components/fim.dart';
 import 'package:chegou_a_feira/login.dart';
 import 'package:chegou_a_feira/minhaconta.dart';
-import 'package:chegou_a_feira/produtos/sabao.dart';
+import 'package:chegou_a_feira/produtos/sabao1.dart';
 import 'package:chegou_a_feira/carrinho.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -86,7 +86,7 @@ class _DestaquesState extends State<Destaques> {
                           GestureDetector(
                             onTap: () {
                               Navigator.of(context).push(
-                                MaterialPageRoute(builder: (context) => Sabao()),
+                                MaterialPageRoute(builder: (context) => Sabao1()),
                               );
                             },
                             child: Image.asset('assets/images/sabao.png'),
@@ -2486,13 +2486,6 @@ class _DestaquesState extends State<Destaques> {
                       ),
                     ),
                   ),
-                  Container(
-                      width: double.infinity,
-                        height: 40,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                      ),
-                    ),
                     
                     Fim(),
      ],
