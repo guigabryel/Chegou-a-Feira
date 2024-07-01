@@ -1,5 +1,10 @@
 import 'package:chegou_a_feira/abas%20do%20perfil/alertas.dart';
+import 'package:chegou_a_feira/abas%20do%20perfil/cupons.dart';
+import 'package:chegou_a_feira/abas%20do%20perfil/dados.dart';
+import 'package:chegou_a_feira/abas%20do%20perfil/endereco.dart';
 import 'package:chegou_a_feira/abas%20do%20perfil/favoritos.dart';
+import 'package:chegou_a_feira/abas%20do%20perfil/historico.dart';
+import 'package:chegou_a_feira/abas%20do%20perfil/senha.dart';
 import 'package:chegou_a_feira/components/barra.dart';
 import 'package:chegou_a_feira/components/abainicial.dart';
 import 'package:chegou_a_feira/components/barradoapp.dart';
@@ -227,7 +232,9 @@ class _ContaState extends State<Conta> {
                 leading: Icon(Icons.shopping_cart, color: Colors.grey),
                 title: Text('Histórico de pedidos'),
                 onTap: () {
-                 
+                  Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => Historico()),
+                 );
                 },
               ),
               Divider(height: 1),
@@ -235,7 +242,9 @@ class _ContaState extends State<Conta> {
                 leading: FaIcon(FontAwesomeIcons.ticket, color: Colors.grey),
                 title: Text('Cupons'),
                 onTap: () {
-                  
+                  Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => Cupons()),
+                 );
                 },
               ),
               Divider(height: 1),
@@ -243,7 +252,9 @@ class _ContaState extends State<Conta> {
                 leading: FaIcon(FontAwesomeIcons.fileEdit, color: Colors.grey),
                 title: Text('Dados de Cadastro'),
                 onTap: () {
-                  
+                  Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => Dados()),
+                 );
                 },
               ),
               Divider(height: 1),
@@ -251,7 +262,9 @@ class _ContaState extends State<Conta> {
                 leading: FaIcon(FontAwesomeIcons.mapLocationDot, color: Colors.grey),
                 title: Text('Gerenciar endereços'),
                 onTap: () {
-                  
+                  Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => Endereco()),
+                 );
                 },
               ),
               Divider(height: 1),
@@ -259,7 +272,9 @@ class _ContaState extends State<Conta> {
                 leading: FaIcon(FontAwesomeIcons.asterisk, color: Colors.grey),
                 title: Text('Trocar sua senha'),
                 onTap: () {
-                  
+                  Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => Senha()),
+                 );
                 },
               ),
               Divider(height: 1),
@@ -267,7 +282,9 @@ class _ContaState extends State<Conta> {
                 leading: FaIcon(FontAwesomeIcons.signOutAlt, color: Colors.grey),
                 title: Text('Sair'),
                 onTap: () {
-                
+                Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => Destaques()),
+                 );
              },
             ),
            ],
