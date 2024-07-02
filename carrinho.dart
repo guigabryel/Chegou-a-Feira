@@ -72,17 +72,15 @@ class _TesteState extends State<Meucarrinho> {
                       child: Row(
                         children: [
                           Text('Imagem'),
-                      
                           VerticalDivider(
                             color: Colors.black,
                             thickness: 1,),
-                      
-                      
                           Text('Produto')
                         ],
                       ),
                     ),
                   ),
+
                   Container(
                         width: 350,
                         height: 5,
@@ -125,10 +123,10 @@ class _TesteState extends State<Meucarrinho> {
                                               padding: const EdgeInsets.only(right: 10),
                                               child: Text('R\$ 18,99'),
                                             ),
-                                             
                                           ],
                                         ),
                                       ),
+
                                 Container(
                                   width: 200,
                                   height: 40,
@@ -137,14 +135,15 @@ class _TesteState extends State<Meucarrinho> {
                                     ),
                                   child: QuantitySelector3(),
                           ),
+
                           Padding(
-                                        padding: const EdgeInsets.only(right: 95),
+                            padding: const EdgeInsets.only(right: 95),
                             child: Row(
                               children: [
                                 Text('Total: ', style: TextStyle(fontWeight: FontWeight.bold),),
                                 Text('R\$ 37,98')
-                              ],
-                            ),
+                            ],
+                           ),
                           )
                          ],
                         ),
@@ -153,6 +152,7 @@ class _TesteState extends State<Meucarrinho> {
                      ),
                     ),
                    ),
+
                    Container(
                         width: 350,
                         height: 5,
@@ -160,10 +160,10 @@ class _TesteState extends State<Meucarrinho> {
                         color: Colors.white,
                           ),
                         child: Divider(color: Colors.black12,),
-                      ),
+                    ),
                   ],
                  ),
-                 //AQUI
+                 
                   Column(
                     children: [
                       SizedBox(
@@ -195,10 +195,10 @@ class _TesteState extends State<Meucarrinho> {
                                             padding: const EdgeInsets.only(right: 10),
                                             child: Text('R\$ 4,89'),
                                           ),
-                                           
                                         ],
                                       ),
                                     ),
+
                                 Padding(
                                   padding: const EdgeInsets.only(right: 50),
                                   child: Container(
@@ -208,15 +208,16 @@ class _TesteState extends State<Meucarrinho> {
                                   color: Colors.white,
                                     ),
                                   child: QuantitySelector3(),
-                                                            ),
+                                  ),
                                 ),
+                                
                                 Padding(
                                   padding: const EdgeInsets.only(right: 140),
                                   child: Row(
                                   children: [
                                     Text('Total: ', style: TextStyle(fontWeight: FontWeight.bold),),
                                     Text('R\$ 14,67')
-                                      ],
+                           ],
                           ),
                          ),
                         ],
@@ -225,6 +226,7 @@ class _TesteState extends State<Meucarrinho> {
                      ),
                     ),
                    ),
+
                    Container(
                         width: 350,
                         height: 5,
@@ -232,10 +234,10 @@ class _TesteState extends State<Meucarrinho> {
                         color: Colors.white,
                           ),
                         child: Divider(color: Colors.black12,),
-                      ),
+                   ),
                   ],
                  ),
-                 //AQUI
+                 
                   Column(
                     children: [
                       SizedBox(
@@ -267,10 +269,10 @@ class _TesteState extends State<Meucarrinho> {
                                             padding: const EdgeInsets.only(right: 10),
                                             child: Text('R\$ 4,29'),
                                           ),
-                                           
                                         ],
                                       ),
                                     ),
+
                                 Padding(
                                   padding: const EdgeInsets.only(right: 50),
                                   child: Container(
@@ -280,7 +282,7 @@ class _TesteState extends State<Meucarrinho> {
                                   color: Colors.white,
                                     ),
                                   child: QuantitySelector3(),
-                                                            ),
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 150),
@@ -288,7 +290,7 @@ class _TesteState extends State<Meucarrinho> {
                                   children: [
                                     Text('Total: ', style: TextStyle(fontWeight: FontWeight.bold),),
                                     Text('R\$ 8,58')
-                                      ],
+                           ]
                           ),
                          ),
                         ],
@@ -297,6 +299,7 @@ class _TesteState extends State<Meucarrinho> {
                      ),
                     ),
                    ),
+
                    Container(
                         width: 350,
                         height: 5,
@@ -304,10 +307,10 @@ class _TesteState extends State<Meucarrinho> {
                         color: Colors.white,
                           ),
                         child: Divider(color: Colors.black12,),
-                      ),
+                   ),
                   ],
                  ),
-                 //AQUI
+                 
                   Column(
                     children: [
                       SizedBox(
@@ -339,10 +342,10 @@ class _TesteState extends State<Meucarrinho> {
                                             padding: const EdgeInsets.only(right: 10),
                                             child: Text('R\$ 2,69'),
                                           ),
-                                           
                                         ],
                                       ),
                                     ),
+
                                 Padding(
                                   padding: const EdgeInsets.only(right: 50),
                                   child: Container(
@@ -352,7 +355,7 @@ class _TesteState extends State<Meucarrinho> {
                                   color: Colors.white,
                                     ),
                                   child: QuantitySelector3(),
-                                                            ),
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 145),
@@ -360,7 +363,7 @@ class _TesteState extends State<Meucarrinho> {
                                   children: [
                                     Text('Total: ', style: TextStyle(fontWeight: FontWeight.bold),),
                                     Text('R\$ 10,76')
-                                      ],
+                           ],
                           ),
                          ),
                         ],
@@ -369,6 +372,7 @@ class _TesteState extends State<Meucarrinho> {
                      ),
                     ),
                    ),
+
                    Container(
                         width: 350,
                         height: 5,
@@ -376,10 +380,10 @@ class _TesteState extends State<Meucarrinho> {
                         color: Colors.white,
                           ),
                         child: Divider(color: Colors.black12,),
-                      ),
+                    ),
                   ],
                  ),
-                 //AQUI
+                 
                   Column(
                     children: [
                       SizedBox(
@@ -411,10 +415,10 @@ class _TesteState extends State<Meucarrinho> {
                                             padding: const EdgeInsets.only(right: 10),
                                             child: Text('R\$ 1,99'),
                                           ),
-                                           
                                         ],
                                       ),
                                     ),
+
                                 Padding(
                                   padding: const EdgeInsets.only(right: 50),
                                   child: Container(
@@ -424,7 +428,7 @@ class _TesteState extends State<Meucarrinho> {
                                   color: Colors.white,
                                     ),
                                   child: QuantitySelector3(),
-                                                            ),
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 150),
@@ -432,7 +436,7 @@ class _TesteState extends State<Meucarrinho> {
                                   children: [
                                     Text('Total: ', style: TextStyle(fontWeight: FontWeight.bold),),
                                     Text('R\$ 1,99')
-                                      ],
+                           ],
                           ),
                          ),
                         ],
@@ -441,6 +445,7 @@ class _TesteState extends State<Meucarrinho> {
                      ),
                     ),
                    ),
+                   
                    Container(
                         width: 350,
                         height: 5,
@@ -797,7 +802,6 @@ class _TesteState extends State<Meucarrinho> {
                          ),
                         ],
                        ),
-
                       ],
                      ),
                     ),
@@ -1122,14 +1126,10 @@ class _TesteState extends State<Meucarrinho> {
           ],
          ),
         ),
-
-
-            
-
-           ],
-          ),
-         ),
-        ),
+       ],
+      ),
+     ),
+    ),
                 Fim(),
 
        ]
