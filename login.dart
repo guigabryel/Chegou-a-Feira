@@ -46,7 +46,7 @@ class _LoginState extends State<Login> {
           
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 1504,
+              height: 1454,
               color: Color.fromARGB(255, 255, 255, 255),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,6 +64,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
+                  
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Row(
@@ -92,6 +93,7 @@ class _LoginState extends State<Login> {
                       ],
                     ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Row(
@@ -114,6 +116,7 @@ class _LoginState extends State<Login> {
                       ],
                     ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Row(
@@ -136,6 +139,7 @@ class _LoginState extends State<Login> {
                       ],
                     ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Row(
@@ -158,6 +162,7 @@ class _LoginState extends State<Login> {
                       ],
                     ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child: Text(
@@ -169,12 +174,12 @@ class _LoginState extends State<Login> {
                         fontWeight: FontWeight.bold,
                         decoration: TextDecoration.underline,
                         decorationColor: Colors.black
-                        
-                        
                       ),
                     ),
                   ),
+
                   SizedBox(height: 20,),
+
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 430,
@@ -200,7 +205,9 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
+
                         SizedBox(height: 7,),
+
                         Padding(
                           padding: const EdgeInsets.only(left: 16),
                           child: Text(
@@ -212,6 +219,7 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
+
                         Padding(
                           padding: const EdgeInsets.only(left: 16),
                           child: Text(
@@ -223,7 +231,9 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
+
                         SizedBox(height: 10,),
+
                         Padding(
                           padding: const EdgeInsets.only(left: 19),
                           child: Text(
@@ -234,6 +244,7 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
+
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: TextField(
@@ -246,7 +257,9 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
+
                         SizedBox(height: 10,),
+
                         Padding(
                           padding: const EdgeInsets.only(left: 19),
                           child: Text(
@@ -257,6 +270,7 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
+
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: TextField(
@@ -283,7 +297,9 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
+
                         SizedBox(height: 13,),  
+
                         Padding(
                           padding: const EdgeInsets.only(left: 16.0),
                           child: ElevatedButton(
@@ -301,10 +317,10 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
-                        
                       ],
                     ),
                   ),
+
                       SizedBox(height: 50,),
                   
                   Fim(),
