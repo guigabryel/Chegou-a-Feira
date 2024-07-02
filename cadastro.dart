@@ -39,7 +39,7 @@ class Cadastro extends StatelessWidget {
                   Abainicial(),
 
       Container(
-        height: 2016,
+        height: 1986,
         width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.white
@@ -53,9 +53,10 @@ class Cadastro extends StatelessWidget {
               child: Text('Minha Conta',
               style: TextStyle(
                 fontSize: 28
-              ),
+                ),
               ),
             ),
+            
             SizedBox(height: 5,),
 
             Padding(
@@ -77,8 +78,8 @@ class Cadastro extends StatelessWidget {
                         },
               child: Text('clicando aqui.',
                   style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                   ),
-                      ),
                 ],
               ),
             ),
@@ -91,9 +92,9 @@ class Cadastro extends StatelessWidget {
               style: TextStyle(fontSize: 20),
               ),
             ),
+
             Padding(
               padding:  EdgeInsets.only(top: 1),
-            
               child: Divider(color: Colors.black12,
               thickness: 1,),
             ),
@@ -104,146 +105,150 @@ class Cadastro extends StatelessWidget {
                 Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
                 SizedBox(width: 3,),
                 Text('Nome'),
-
-              ],
+                ],
               ),
             ),
+            
             Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SizedBox(
-                            height: 38,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                labelText: 'Nome',
-                                labelStyle: TextStyle(color: Colors.grey),
-                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(3),
-                                )
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 5,),
+              padding: const EdgeInsets.all(10.0),
+              child: SizedBox(
+                height: 38,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Nome',
+                    labelStyle: TextStyle(color: Colors.grey),
+                    contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(3),
+                    )
+                  ),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 5,),
+
             Padding(
               padding: const EdgeInsets.only(left: 19),
               child: Row(children: [
                 Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
                 SizedBox(width: 3,),
                 Text('Sobrenome'),
-
-              ],
+                ],
               ),
             ),
+
             Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SizedBox(
-                            height: 38,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                labelText: 'Sobrenome',
-                                labelStyle: TextStyle(color: Colors.grey),
-                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black12, width: 2),
-                                  borderRadius: BorderRadius.circular(3),
-                                )
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(height: 5,),
+              padding: const EdgeInsets.all(10.0),
+              child: SizedBox(
+                height: 38,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Sobrenome',
+                    labelStyle: TextStyle(color: Colors.grey),
+                    contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black12, width: 2),
+                      borderRadius: BorderRadius.circular(3),
+                    )
+                  ),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 5,),
+            
             Padding(
               padding: const EdgeInsets.only(left: 19),
               child: Row(children: [
                 Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
                 SizedBox(width: 3,),
                 Text('CPF'),
-
-              ],
+                ],
               ),
             ),
+
             Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SizedBox(
-                            height: 38,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                labelText: 'CPF',
-                                labelStyle: TextStyle(color: Colors.grey),
-                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black12, width: 2),
-                                  borderRadius: BorderRadius.circular(3),
-                                )
-                              ),
-                            ),
-                          ),
-                        ),
+              padding: const EdgeInsets.all(10.0),
+              child: SizedBox(
+                height: 38,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'CPF',
+                    labelStyle: TextStyle(color: Colors.grey),
+                    contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black12, width: 2),
+                      borderRadius: BorderRadius.circular(3),
+                    )
+                  ),
+                ),
+              ),
+            ),
 
-                        Calendario(),
+            Calendario(),
 
-                        SizedBox(height: 5,),
+            SizedBox(height: 5,),
 
-                      Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 19),
               child: Row(children: [
                 Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
                 SizedBox(width: 3,),
                 Text('E-mail'),
-
-              ],
+                ],
               ),
             ),
+
             Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SizedBox(
-                            height: 38,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                labelText: 'E-mail',
-                                labelStyle: TextStyle(color: Colors.grey),
-                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black12, width: 2),
-                                  borderRadius: BorderRadius.circular(3),
-                                )
-                              ),
-                            ),
-                          ),
-                        ),
+              padding: const EdgeInsets.all(10.0),
+              child: SizedBox(
+                height: 38,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'E-mail',
+                    labelStyle: TextStyle(color: Colors.grey),
+                    contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black12, width: 2),
+                      borderRadius: BorderRadius.circular(3),
+                    )
+                  ),
+                ),
+              ),
+            ),
 
-                        SizedBox(height: 5,),
+            SizedBox(height: 5,),
 
-                      Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 19),
               child: Row(children: [
                 Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
                 SizedBox(width: 3,),
                 Text('Telefone'),
-
-              ],
+               ],
               ),
             ),
-            Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SizedBox(
-                            height: 38,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                labelText: 'Telefone',
-                                labelStyle: TextStyle(color: Colors.grey),
-                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black12, width: 2),
-                                  borderRadius: BorderRadius.circular(3),
-                                )
-                              ),
-                            ),
-                          ),
-                        ),
 
-                        SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: SizedBox(
+                height: 38,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Telefone',
+                    labelStyle: TextStyle(color: Colors.grey),
+                    contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black12, width: 2),
+                      borderRadius: BorderRadius.circular(3),
+                    )
+                  ),
+                ),
+              ),
+            ),
+
+            SizedBox(height: 10,),
 
             Padding(
               padding: EdgeInsets.only(right: 176),
@@ -251,73 +256,73 @@ class Cadastro extends StatelessWidget {
               style: TextStyle(fontSize: 20),
               ),
             ),
+
             Padding(
               padding:  EdgeInsets.only(top: 1),
-            
               child: Divider(color: Colors.black12,
               thickness: 1,),
             ),
 
             SizedBox(height: 5,),
 
-                      Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 19),
               child: Row(children: [
                 Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
                 SizedBox(width: 3,),
                 Text('Senha'),
-
-              ],
+               ],
               ),
             ),
+
             Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SizedBox(
-                            height: 38,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                labelText: 'Senha',
-                                labelStyle: TextStyle(color: Colors.grey),
-                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black12, width: 2),
-                                  borderRadius: BorderRadius.circular(3),
-                                )
-                              ),
-                            ),
-                          ),
-                        ),
+              padding: const EdgeInsets.all(10.0),
+              child: SizedBox(
+                height: 38,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Senha',
+                    labelStyle: TextStyle(color: Colors.grey),
+                    contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black12, width: 2),
+                      borderRadius: BorderRadius.circular(3),
+                    )
+                  ),
+                ),
+              ),
+            ),
+
             SizedBox(height: 5,),
 
-                      Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 19),
               child: Row(children: [
                 Text('*',style: TextStyle(color: Colors.red, fontSize: 18),),
                 SizedBox(width: 3,),
                 Text('Repetir a Senha'),
-
-              ],
+                ],
               ),
             ),
             Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SizedBox(
-                            height: 38,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                labelText: 'Repetir a Senha',
-                                labelStyle: TextStyle(color: Colors.grey),
-                                contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
-                                border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.black12, width: 2),
-                                  borderRadius: BorderRadius.circular(3),
-                                )
-                              ),
-                            ),
-                          ),
-                        ),
-
-                        SizedBox(height: 10,),
+              padding: const EdgeInsets.all(10.0),
+              child: SizedBox(
+                height: 38,
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Repetir a Senha',
+                    labelStyle: TextStyle(color: Colors.grey),
+                    contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 17.0),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black12, width: 2),
+                      borderRadius: BorderRadius.circular(3),
+                    )
+                  ),
+                ),
+              ),
+            ),
+            
+            SizedBox(height: 10,),
 
             Padding(
               padding: EdgeInsets.only(right: 260),
@@ -325,9 +330,9 @@ class Cadastro extends StatelessWidget {
               style: TextStyle(fontSize: 20),
               ),
             ),
+
             Padding(
               padding:  EdgeInsets.only(top: 1),
-            
               child: Divider(color: Colors.black12,
               thickness: 1,),
             ),
@@ -338,39 +343,39 @@ class Cadastro extends StatelessWidget {
               padding: const EdgeInsets.only(right: 258),
               child: Text('Deseja receber?'),
             ),
+
             RadioButtons(),
 
             SizedBox(height: 20,),
 
-             Padding(
-                          padding: const EdgeInsets.only(right: 250),
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(builder: (context) => Cadastro()),
-                              );
-                            },
-                            child: Text('Continuar'),
-                            style: ElevatedButton.styleFrom(
-                              foregroundColor: Colors.white,
-                              backgroundColor: Color.fromARGB(255, 41, 5, 70), 
-                              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10), 
-                              shape: RoundedRectangleBorder(),
-                            ),
-                          ),
-                        ),
+            Padding(
+              padding: const EdgeInsets.only(right: 250),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => Cadastro()),
+                  );
+                },
+                child: Text('Continuar'),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Color.fromARGB(255, 41, 5, 70), 
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10), 
+                  shape: RoundedRectangleBorder(),
+                ),
+              ),
+            ),
 
-                        SizedBox(height: 30,),
-
+            SizedBox(height: 30,),
                        
                   Fim(),
           
-              ]
-            ),
-          ),
         ]
+       ),
       ),
+     ]
     ),
+   ),
   );
  }
 }
