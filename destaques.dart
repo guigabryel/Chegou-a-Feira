@@ -1,16 +1,5 @@
 import 'package:chegou_a_feira/components/barra.dart';
 import 'package:chegou_a_feira/cadastro.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/alho.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/banana.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/batatadoce.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/batatainglesa.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/cebola.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/invictolimao.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/invictomaca.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/invictoneutro.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/macarrao.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/sabao.dart';
-import 'package:chegou_a_feira/produtos%20em%20destaques/tomate.dart';
 import 'components/abainicial.dart';
 import 'components/barralateral.dart';
 import 'components/botaodestaques.dart';
@@ -21,10 +10,31 @@ import 'package:chegou_a_feira/produtos/sabao1.dart';
 import 'package:chegou_a_feira/carrinho.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'produtos em destaques/abacaxi.dart';
+import 'produtos em destaques/alface.dart';
+import 'produtos em destaques/alho.dart';
+import 'produtos em destaques/banana.dart';
+import 'produtos em destaques/batatadoce.dart';
+import 'produtos em destaques/batatainglesa.dart';
 import 'produtos em destaques/batatapalha.dart';
+import 'produtos em destaques/beterraba.dart';
 import 'produtos em destaques/biscoito.dart';
+import 'produtos em destaques/bolinhas.dart';
+import 'produtos em destaques/cebola.dart';
+import 'produtos em destaques/cenoura.dart';
+import 'produtos em destaques/coco.dart';
+import 'produtos em destaques/coentro.dart';
+import 'produtos em destaques/coxinha.dart';
+import 'produtos em destaques/inhame.dart';
+import 'produtos em destaques/invictolimao.dart';
+import 'produtos em destaques/invictomaca.dart';
+import 'produtos em destaques/invictoneutro.dart';
+import 'produtos em destaques/jerimum.dart';
+import 'produtos em destaques/leite.dart';
 import 'produtos em destaques/maca.dart';
+import 'produtos em destaques/macarrao.dart';
+import 'produtos em destaques/sabao.dart';
+import 'produtos em destaques/tomate.dart';
 
 class Destaques extends StatefulWidget {
   const Destaques({super.key});
@@ -53,7 +63,6 @@ class _DestaquesState extends State<Destaques> {
       ),
             drawer: Barralateral(),
 
-      
             body: SingleChildScrollView(
               child:  Column(
               children: [
@@ -82,7 +91,7 @@ class _DestaquesState extends State<Destaques> {
 
           Sabao(),
 
-          Biscoito()
+          Biscoito(),
        ],
       ),
       Row(
@@ -90,7 +99,7 @@ class _DestaquesState extends State<Destaques> {
 
           Batatapalha(),
           
-          Macarrao()
+          Macarrao(),
        ],
       ),
       
@@ -108,7 +117,7 @@ class _DestaquesState extends State<Destaques> {
 
           Invictoneutro(),
 
-          Banana()
+          Banana(),
        ],
       ),
 
@@ -117,7 +126,7 @@ class _DestaquesState extends State<Destaques> {
 
           Maca(),
           
-          Tomate()
+          Tomate(),
        ],
       ),
       
@@ -126,7 +135,7 @@ class _DestaquesState extends State<Destaques> {
           
           Cebola(),
 
-          Alho()
+          Alho(),
        ],
       ),
       
@@ -135,906 +144,60 @@ class _DestaquesState extends State<Destaques> {
           
           Batatainglesa(),
 
-          Batatadoce()
+          Batatadoce(),
        ],
       ),
      
       Row(
         children: [
-          Container(
-            width: 200,
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/alface.png', ),
-                    ],
-                    ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 80.0),
-                      child: Text('Alface 1 Und',),
-                    ),
-                    SizedBox(height: 30,),
-
-                   Padding(
-                      padding: const EdgeInsets.only(right: 90.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$4,79',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                            ),
-                           ),
-                          ),
-                            
-        ],
-       ),
-      ),
-     ),
-                        SizedBox(height: 15,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-    ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
-            ),           
-          ),
-          Container(
-            width: 190,
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/coentro.png', ),
-                    
-
-                    
-
-
-                    ],
-                    ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 70.0),
-                      child: Text('Coentro 1 Und',),
-                    ),
-
-                    SizedBox(height: 30,),
-
-                    Padding(
-                      padding: const EdgeInsets.only(right: 90.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$2,40',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                            ),
-                           ),
-                          ),
-                            
-        ],
-       ),
-      ),
-     ),
-                        SizedBox(height: 14,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-    ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                        )
-               ]
-              ),
-             ],
-            ),           
-          ),
+          
+          Alface(),
+          
+          Coentro(),
        ],
       ),
-      //ATÉ AQUI
-      //AQUI
+      
       Row(
         children: [
-          Container(
-            width: 200,
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 15),
-                      child: Image.asset('assets/images/cenoura.png', ),
-                    ),
-                    ],
-                    ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 80.0),
-                      child: Text('Cenoura 500g',),
-                    ),
-                    SizedBox(height: 30,),
+          
+          Cenoura(),
 
-                   Padding(
-                      padding: const EdgeInsets.only(right: 90.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$5,20',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                            ),
-                           ),
-                          ),
-                            
-        ],
-       ),
-      ),
-     ),
-                        SizedBox(height: 15,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-    ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                    )
-                  ]
-                ),
-              ],
-            ),
-          ),
-          Container(
-            width: 190,
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/beterraba.png', ),
-                    ],
-                   ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 60.0),
-                      child: Text('Beterraba 500g',),
-                    ),
-
-                    SizedBox(height: 30,),
-
-                    Padding(
-                      padding: const EdgeInsets.only(right: 90.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$7,99',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                                ),
-                              ),
-                            ),
-                           ],
-                         ),
-                       ),
-                     ),
-                        SizedBox(height: 14,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-                      ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                    )
-                  ]
-                ),
-              ],
-            ),           
-          ),
+          Beterraba(),
         ],
       ),
-      //ATÉ AQUI
-      //AQUI
+      
       Row(
         children: [
-          Container(
-            width: 200,
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/jerimum.png', ),
-                    ],
-                    ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 45.0),
-                      child: Text('Jerimum Leite 1Kg',),
-                    ),
-                    SizedBox(height: 30,),
+          
+          Jerimum(),
 
-                   Padding(
-                      padding: const EdgeInsets.only(right: 90.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$3,99',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                        SizedBox(height: 15,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-                              ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                            )
-                          ]
-                        ),
-                      ],
-                    ),
-                  ),
-          Container(
-            width: 190,
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/coco.png', ),
-                    ],
-                    ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 50.0),
-                      child: Text('Coco Seco 1 Und',),
-                    ),
-
-                    SizedBox(height: 30,),
-
-                    Padding(
-                      padding: const EdgeInsets.only(right: 90.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$2,99',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                                ),
-                              ),
-                            ),
-                           ],
-                         ),
-                       ),
-                     ),
-                        SizedBox(height: 14,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-                      ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                    )
-                  ]
-                ),
-              ],
-            ),           
-          ),
+          Coco(),
         ],
       ),
-      //ATÉ AQUI
-      //AQUI
+      
       Row(
         children: [
-          Container(
-            width: 200,
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/inhame.png', ),
-                    ],
-                    ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 75.0),
-                      child: Text('Inhame 1,5Kg',),
-                    ),
-                    SizedBox(height: 30,),
+          
+          Inhame(),
 
-                   Padding(
-                      padding: const EdgeInsets.only(right: 80.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$33,60',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                               ),
-                              ),
-                            ),
-                          ],
-                         ),
-                       ),
-                     ),
-                        SizedBox(height: 15,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-                      ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                    )
-                  ]
-                ),
-              ],
-            ),           
-          ),
-          Container(
-            width: 190,
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/abacaxi.png', ),
-                      ],
-                    ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 70.0),
-                      child: Text('Abacaxi 1 Und',),
-                    ),
-
-                    SizedBox(height: 30,),
-
-                    Padding(
-                      padding: const EdgeInsets.only(right: 90.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$7,99',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                                ),
-                              ),
-                            ),
-                          ],
-                         ),
-                       ),
-                     ),
-                        SizedBox(height: 14,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-                          ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                           )
-                         ]
-                       ),
-                     ],
-                   ),           
-                 ),
+          Abacaxi(),
                ],
              ),
-      //ATÉ AQUI
-      //AQUI
+      
       Row(
         children: [
-          Container(
-            width: 200,
-            height: 420,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/vermelho.png', ),
-                    ],
-                    ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10.0),
-                      child: Text('Bolinhas de Diversas Pré',),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 5),
-                      child: Text('Frito Lara ( Carne, Frango,'),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 55),
-                      child: Text(' Queijo Pizza) 500g'),
-                    ),
-                    SizedBox(height: 10,),
+          
+          Bolinhas(),
 
-                   Padding(
-                      padding: const EdgeInsets.only(right: 80.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$24,99',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-
-                        SizedBox(height: 15,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-                      ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                    )
-                  ]
-                ),
-              ],
-            ),           
-          ),
-          Container(
-            width: 190,
-            height: 420,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/amarela.png', ),
-                      ],
-                    ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10.0),
-                      child: Text('Coxinhas de Frango Pré',),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 66.0),
-                      child: Text('Frito Lara 500g',),
-                    ),
-
-                    SizedBox(height: 30,),
-
-                    Padding(
-                      padding: const EdgeInsets.only(right: 80.0),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$19,49',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                        SizedBox(height: 14,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-
-                        ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                    )
-                  ]
-                ),
-              ],
-            ),           
-          ),
+          Coxinha(),
         ],
       ),
-      //ATÉ AQUI
-            //AQUI
+      
       Row(
         children: [
-          Container(
-            width: 200,
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: Colors.black12,
-                width: 1
-              )
-            ),
-            
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Stack(
-                      children: [
-                    Image.asset('assets/images/leite.png', ),
-                    Positioned(
-                      bottom: 10,
-                      left: 0,
-                  child: Container(
-                      width: 78,
-                      height: 30,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 41, 5, 70),
-                      ),
-                      child: Center(
-                        child: Text('PROMOÇÃO',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 11
-                            ),
-                          ),
-                        ),
-                      ), 
-                    ),
-                  ],
-                ),
-                    SizedBox(height: 10,),
-                    
-                    Padding(
-                      padding: const EdgeInsets.only(right: 25.0),
-                      child: Text('Leite Cemil Integral 1L',),
-                    ),
-                   
+          
+          Leite(),
 
-                    SizedBox(height: 30,),
-
-                    Padding(
-                      padding: const EdgeInsets.only(right: 30),
-                      child: Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Center(
-                            child: Text('R\$5,99',
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 156, 16, 16),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14,
-                              ),
-                            ),
-                          ),
-                            SizedBox(width: 10,),
-                            Container(
-                        width: 75,
-                        height: 25,
-                        decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 202, 24, 24),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: Alignment.center,
-                            child: Text('R\$7,99',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      ),
-                       Positioned(
-                        left: 9,
-                        child: Text('__________',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12
-                           ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ), 
-                ],
-              ),
-            ),
-          ),
-
-                        SizedBox(height: 20,),
-
-                        Container(
-                         width: 170,
-                        height: 5,
-                        decoration: BoxDecoration(
-                        color: Colors.white
-                          ),
-                        child: Divider(color: Colors.black12,),
-                        ),
-                        Container(
-                          width: 180,
-                        height: 100,
-                          child: QuantitySelector(),
-                    )
-                  ]
-                ),
-              ],
-            ),           
-          ),
           Container(
             width: 190,
             height: 400,
