@@ -68,8 +68,8 @@ class _ContaState extends State<Conta> {
                         
                    SizedBox(height: 5,),
                         
-                   Text('Nome do Cliente', 
-                   style: TextStyle(
+                  Text('Nome do Cliente', 
+                  style: TextStyle(
                   fontWeight: FontWeight.bold
                    ),
                   ),
@@ -99,6 +99,7 @@ class _ContaState extends State<Conta> {
                 ),
                ),
               ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
@@ -113,6 +114,7 @@ class _ContaState extends State<Conta> {
                 ),
                ),
               ),
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
@@ -129,6 +131,7 @@ class _ContaState extends State<Conta> {
             ),
            ],
           ),
+
            Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -140,6 +143,7 @@ class _ContaState extends State<Conta> {
               },
               child: Text('Minha'),
             ),
+
             GestureDetector(
               onTap: () {
             Navigator.of(context).pushReplacement(
@@ -148,6 +152,7 @@ class _ContaState extends State<Conta> {
               },
               child: Text('Produtos'),
             ),
+
             GestureDetector(
               onTap: () {
             Navigator.of(context).pushReplacement(
@@ -169,10 +174,10 @@ class _ContaState extends State<Conta> {
             MaterialPageRoute(builder: (context) => Prateleira()),
                 );
               },
-                
                 child: Text('Prateleira'),
+               ),
               ),
-              ),
+
               Padding(
                 padding: const EdgeInsets.only(left: 60),
                 child:GestureDetector(
@@ -182,8 +187,9 @@ class _ContaState extends State<Conta> {
                 );
               },
                 child: Text('Favoritos'),
+               ),
               ),
-              ),
+
               Padding(
                 padding: const EdgeInsets.only(left: 69),
                 child: GestureDetector(
@@ -217,6 +223,7 @@ class _ContaState extends State<Conta> {
               color: Colors.white,
               borderRadius: BorderRadius.circular(5)
             ),
+
             child: Column(
             children: [
               
@@ -227,7 +234,9 @@ class _ContaState extends State<Conta> {
                  
                 },
               ),
+
               Divider(height: 1),
+
               ListTile(
                 leading: Icon(Icons.shopping_cart, color: Colors.grey),
                 title: Text('Histórico de pedidos'),
@@ -237,7 +246,9 @@ class _ContaState extends State<Conta> {
                  );
                 },
               ),
+
               Divider(height: 1),
+
               ListTile(
                 leading: FaIcon(FontAwesomeIcons.ticket, color: Colors.grey),
                 title: Text('Cupons'),
@@ -247,7 +258,9 @@ class _ContaState extends State<Conta> {
                  );
                 },
               ),
+
               Divider(height: 1),
+
               ListTile(
                 leading: FaIcon(FontAwesomeIcons.fileEdit, color: Colors.grey),
                 title: Text('Dados de Cadastro'),
@@ -257,7 +270,9 @@ class _ContaState extends State<Conta> {
                  );
                 },
               ),
+
               Divider(height: 1),
+
               ListTile(
                 leading: FaIcon(FontAwesomeIcons.mapLocationDot, color: Colors.grey),
                 title: Text('Gerenciar endereços'),
@@ -267,7 +282,9 @@ class _ContaState extends State<Conta> {
                  );
                 },
               ),
+
               Divider(height: 1),
+
               ListTile(
                 leading: FaIcon(FontAwesomeIcons.asterisk, color: Colors.grey),
                 title: Text('Trocar sua senha'),
@@ -277,14 +294,16 @@ class _ContaState extends State<Conta> {
                  );
                 },
               ),
+
               Divider(height: 1),
+
               ListTile(
                 leading: FaIcon(FontAwesomeIcons.signOutAlt, color: Colors.grey),
                 title: Text('Sair'),
                 onTap: () {
                 Navigator.of(context).pushReplacement(
                 MaterialPageRoute(builder: (context) => Destaques()),
-                 );
+              );
              },
             ),
            ],
