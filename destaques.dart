@@ -47,53 +47,53 @@ class _DestaquesState extends State<Destaques> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-            appBar: AppBar(
-              backgroundColor: Color.fromARGB(255, 176, 39, 69),
-              iconTheme: IconThemeData(
-                color: Colors.white
-              ),
-        
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 176, 39, 69),
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
         actions: [
           login(),
-          SizedBox(width: 18,),
+          SizedBox(width: 18),
           cadastro(),
-          SizedBox(width: 10,),
-        ]
+          SizedBox(width: 10),
+        ],
       ),
-            drawer: Barralateral(),
-
-            body: SingleChildScrollView(
-              child:  Column(
-              children: [
-               
-                Abainicial(),
-           
-      Container(
-         width: MediaQuery.of(context).size.width,
-         height: 70,
-         color: Colors.white,
-         child: 
-         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+      drawer: Barralateral(),
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-            Text('DESTAQUES',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 30,
+            Abainicial(),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 70,
+              color: Colors.white,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'DESTAQUES',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 30,
+                    ),
+                  ),
+                ],
+              ),
             ),
-           ),
-          ],
-         ),
-      ),
-      Row(
-        children: [
+           Row(
+              children: [
+                Expanded(
+                  child: Sabao()
+                ),
 
-          Sabao(),
-
-          Biscoito(),
-       ],
-      ),
+                Expanded(
+                  child: Biscoito()
+                ),
+              ],
+            ),
+       
+      
       Row(
         children: [
 
@@ -233,9 +233,9 @@ class _DestaquesState extends State<Destaques> {
                   ),
                     
                     Fim(),
-     ],
+          ]
     ),
-   ),
+      ),
   );
  }
 }
