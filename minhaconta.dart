@@ -165,42 +165,34 @@ class _ContaState extends State<Conta> {
            ),
 
            Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 30),
-                child: GestureDetector(
-              onTap: () {
-            Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => Prateleira()),
-                );
-              },
-                child: Text('Prateleira'),
-               ),
-              ),
+              GestureDetector(
+                            onTap: () {
+                          Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Prateleira()),
+              );
+                            },
+              child: Text('Prateleira'),
+                             ),
 
-              Padding(
-                padding: const EdgeInsets.only(left: 60),
-                child:GestureDetector(
-              onTap: () {
-            Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => Favoritos()),
-                );
-              },
-                child: Text('Favoritos'),
-               ),
-              ),
+              GestureDetector(
+                            onTap: () {
+                          Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Favoritos()),
+              );
+                            },
+              child: Text('Favoritos   '),
+                             ),
 
-              Padding(
-                padding: const EdgeInsets.only(left: 69),
-                child: GestureDetector(
-              onTap: () {
-            Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => Prateleira()),
-                );
-              },
-                child: Text('Alertas'),
-              ),
-             ),
+              GestureDetector(
+                            onTap: () {
+                          Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => Prateleira()),
+              );
+                            },
+              child: Text('Alertas'),
+                            ),
             ],
            ),
 
