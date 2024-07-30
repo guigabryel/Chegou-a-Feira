@@ -46,7 +46,7 @@ class _LoginState extends State<Login> {
           
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 1380,
+              height: 1454,
               color: Color.fromARGB(255, 255, 255, 255),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
