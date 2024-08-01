@@ -65,7 +65,7 @@ class Cadastro extends StatelessWidget {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(left: 17),
+              padding: const EdgeInsets.only(left: 25),
               child: Row(
                 children: [
                   Text('sua conta '),
