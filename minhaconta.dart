@@ -93,7 +93,7 @@ class _ContaState extends State<Conta> {
                           children: [
                             Image.asset('assets/images/coracao.png', width: 60),
                             SizedBox(height: 5),
-                            Text('Favoritos'),
+                            Text('Meus Favoritos'),
                           ],
                         ),
                       ),
@@ -107,7 +107,7 @@ class _ContaState extends State<Conta> {
                           children: [
                             Image.asset('assets/images/sino.png', width: 60),
                             SizedBox(height: 5),
-                            Text('Alertas'),
+                            Text('Meus Alertas'),
                           ],
                         ),
                       ),
