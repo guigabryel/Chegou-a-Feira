@@ -39,23 +39,27 @@ class Sabao1 extends StatelessWidget {
                   
                   Abainicial(),
 
-      Container(
-        height: 450,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Colors.white
-        ),
-        child: Column(
-          children: [
-            Image.asset('assets/images/sabao2.png',),
-            SizedBox(height: 20,),
-            Padding(
-              padding: const EdgeInsets.all(7.0),
-              child: Divider(color: Colors.black12,),
-            )
-          ],
-        ),
-      ),
+                  Container(
+              height: MediaQuery.of(context).size.height * 0.55, 
+              width: MediaQuery.of(context).size.width, 
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.8, 
+                    child: Image.asset('assets/images/sabao2.png', fit: BoxFit.contain), 
+                  ),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.02), 
+                  Padding(
+                    padding: const EdgeInsets.all(7.0),
+                    child: Divider(color: Colors.black12),
+                  )
+                ],
+              ),
+            ),
+
       Container(
         height: 1081,
         width: double.infinity,
